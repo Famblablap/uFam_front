@@ -1,6 +1,11 @@
+import "../../Components/Feed.css"
+
 function Feed() {
   return (
-    <div>Feed</div>
+    <div id="container">
+      <div className="content"> 
+      </div>
+    </div>
   )
 }
 
