@@ -78,7 +78,7 @@ const router = createBrowserRouter([
                 element: <Invitation/>
             },
             {
-                path: "/ app/messages",
+                path: "/app/messages",
                 element: <Messages/>
             },
             {
