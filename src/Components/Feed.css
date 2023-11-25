@@ -1,13 +1,66 @@
 #container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 90vh;
 }
 
 .content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  border: 1px solid #7209B7;
+  position: relative;
+}
+
+.userInfo,
+.postInteractions {
+  position: absolute;
+  z-index: 1;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  top: 0;
+  left: 0;
+}
+
+.userImage {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.imagePost {
     width: 100%;
     height: 100%;
-    background-color: #7209B7;
+    position: relative; 
+    z-index: 0; 
 }
+
+.postInteractions {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+}
+
+.likeButton,
+.commentButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative; 
+  z-index: 2; 
+}
+
+.likeButton img,
+.commentButton img {
+  width: 25px;
+}
+  

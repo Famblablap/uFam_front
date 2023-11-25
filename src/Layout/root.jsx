@@ -6,7 +6,7 @@ import RigthSide from "../Components/RightSide/RightSide"
 function Root() {
   return (
     <div id="page">
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid container spacing={2} component="main" sx={{ height: "100vh" }}>
           <Grid item sm={3}>
             <LeftSide/>
           </Grid>
