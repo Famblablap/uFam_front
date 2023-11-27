@@ -9,8 +9,9 @@ import {
   Button,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import welcomeimage from "../../assets/image.png";
-import turtle from "../../assets/tortuga.png";
+import welcomeimage from "../../assets/welcome-image.jpg";
+import turtle from "../../assets/text-image.jpg";
+import ContactForm from "../../Components/ContactForm/ContactForm";
 
 function Home() {
   const cards = [
@@ -33,7 +34,7 @@ function Home() {
 
   return (
     <>
-      <Container sx={{ margin: "0 auto" }}>
+      <Container sx={{ margin: "0 auto", padding: "1rem" }}>
         <Box
           id="landing-welcome"
           sx={{
@@ -41,11 +42,8 @@ function Home() {
             flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             justifyContent: "center",
-            mt: { xs: "-60px", sm: "-50px" },
-            minHeight: "100vh",
-            "& > :not(style)": {
-              m: 1,
-            },
+            flexWrap: "wrap",
+            minHeight: { xs: 'auto', sm: '60vh' },
           }}
         >
           <Box
@@ -59,9 +57,12 @@ function Home() {
               src={welcomeimage}
               alt="Family"
               style={{
-                width: "100%",
-                maxWidth: "500px",
-                height: "auto",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                width: 'auto',
+                height: 'auto',
+                objectFit: 'contain',
+                borderRadius: "20px",
               }}
             />
           </Box>
@@ -112,10 +113,19 @@ function Home() {
             </Typography>
           </Box>
         </Box>
-        <Box id="landing-text">
+        <Box id="landing-text"
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: "center",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            minHeight: { xs: 'auto', sm: '60vh' },
+            mt: { xs: 4, sm: 0 },
+          }}>
           <Box
             sx={{
-              position: "relative", // Parent box positioned as relative
+              position: "relative",
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
               alignItems: "center",
@@ -126,10 +136,9 @@ function Home() {
             <Box
               sx={{
                 flex: 1,
-                height: 300,
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "center",
+                alignItems: "center",
                 m: 2,
               }}
             >
@@ -137,9 +146,12 @@ function Home() {
                 src={turtle}
                 alt="Family"
                 style={{
-                  width: "100%",
-                  maxWidth: "500px",
-                  height: "auto",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: 'auto',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  borderRadius: "20px",
                 }}
               />
             </Box>
@@ -170,7 +182,7 @@ function Home() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            // flexWrap: "wrap",
+            flexWrap: "wrap",
           }}
         >
           {cards.map((card) => (
@@ -203,7 +215,7 @@ function Home() {
                   <Typography gutterBottom variant="h5" component="h2">
                     <h4>{card.heading}</h4>
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="white" fontSize={"1rem"}>
                     {card.text}
                   </Typography>
                 </CardContent>
@@ -220,7 +232,17 @@ function Home() {
             </Box>
           ))}
         </Box>
-        <Box id="landing-contact"></Box>
+        <Box id="landing-contact"
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: "center",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          minHeight: { xs: 'auto', sm: '20vh' },
+        }}>
+          <ContactForm/>
+        </Box>
       </Container>
     </>
   );
