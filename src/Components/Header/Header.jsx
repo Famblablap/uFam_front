@@ -17,13 +17,9 @@ const pages = ["APP", "ABOUT US", "FAQ", "SUPPORT"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
@@ -31,10 +27,14 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "transparent" }}>
+    <AppBar
+      position="static"
+      style={{ backgroundColor: "#66c6ec" }}
+      elevation={0}
+    >
       <Container maxWidth="xl">
         <div></div>
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ minHeight: "64px", padding: "8px 0" }}>
           <Typography
             variant="h6"
             noWrap
@@ -44,7 +44,8 @@ function Header() {
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
-              fontWeight: 700,
+              fontWeight: "bold",
+              fontSize: "2.5rem",
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
@@ -89,7 +90,6 @@ function Header() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -100,20 +100,26 @@ function Header() {
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
-              fontWeight: 700,
+              fontWeight: "bold",
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            uFam
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontWeight: "bold",
+                  fontSize: "1.25rem",
+                }}
               >
                 {page}
               </Button>
@@ -121,10 +127,29 @@ function Header() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
+            <Tooltip>
+              <Box
+                sx={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  borderRadius: "20px",
+                  border: "2px solid",
+                  borderColor: "white",
+                  backgroundColor: "transparent",
+                  color: "white",
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "#64c4ec",
+                  },
+                }}
+              >
+                CREATE FAMILY
+              </Box>
             </Tooltip>
           </Box>
         </Toolbar>
