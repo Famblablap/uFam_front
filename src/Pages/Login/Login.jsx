@@ -1,36 +1,36 @@
 import React from "react"
 import "../Login/Login.css"
-import backButtonimg from "../../assets/img/back_login.png"
+import backButtonimgLogin from "../../assets/img/back_login.png"
 import { Link } from 'react-router-dom'
 
 
 function Login() {
   return (
     <>
-      <div className="container">
+      <div className="containerLogin">
         <Link to="/">
-        <div className="arrowButton">
-          <img src={backButtonimg} />
-        </div>
+          <div className="arrowButtonLogin">
+            <img src={backButtonimgLogin} />
+          </div>
         </Link>
         <div className="loginCard">
-          <div className="content">
-            <div className="title">
+          <div>
+            <div className="loginTitle">
               <p><b>Log In</b></p>
             </div>
-            <form className="form">
-              <div className="email">
+            <form className="formLogin">
+              <div className="emailLogin">
                 <label><b>Email:</b></label><br></br>
                 <input
-                  id="email"
+                  id="emailLogin"
                   type="email"
                   placeholder="Enter your email"
                 ></input>
               </div>
-              <div className="password">
+              <div className="passwordLogin">
                 <label><b>Password:</b></label><br></br>
                 <input
-                  id="password"
+                  id="passwordLogin"
                   type="password"
                   placeholder="Enter your password"
                 ></input> <br></br>
@@ -38,21 +38,21 @@ function Login() {
             </form>
           </div>
           <Link to="/app">
-          <button className="loginButton">
-            <b>Log In</b>
-          </button>
+            <button className="loginButtonLogin">
+              <b>Log In</b>
+            </button>
           </Link>
         </div>
-        <div className="noAccount">
+        <div className="noAccountLogin">
           <p>
             <b>
               Don't have an account:
             </b>
           </p>
           <Link to="/signup">
-          <button className="singUpBotton">
-            <b>Sign Up</b>
-          </button>
+            <button className="singUpBottonLogin">
+              <b>Sign Up</b>
+            </button>
           </Link>
         </div>
       </div>
