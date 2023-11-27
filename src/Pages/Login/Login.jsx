@@ -6,9 +6,9 @@ function Login() {
   return (
     <>
       <div className="container">
-      <div className="arrowButton">
-        <img src={backButtonimg} />
-      </div>
+        <div className="arrowButton">
+          <img src={backButtonimg} />
+        </div>
         <div className="loginCard">
           <div className="content">
             <div className="title">

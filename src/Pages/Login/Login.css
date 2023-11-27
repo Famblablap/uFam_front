@@ -51,6 +51,12 @@
     font-size: 20px;
     color: #A05F33;
     background-color: #FEF7D9;
+    transition: #FEF7D9 0.3s ease; 
+}
+
+.singUpBotton:hover { 
+    background-color: #A05F33;
+    color: #FEF7D9;
 }
 
 .loginButton {
@@ -62,6 +68,11 @@
     color: #A05F33;
     background-color: #FEF7D9;
     margin-top: 40px;
+}
+
+.loginButton:hover {
+    background-color: #A05F33;
+    color: #FEF7D9;
 }
 
 .email {
@@ -97,6 +108,11 @@
     width: 73px;
     height: 70px;
     padding: 10px;
+}
+
+.arrowButton:hover {
+    background: #FEF7D9;
+    border-radius: 70px;
 }
 
 .form {
