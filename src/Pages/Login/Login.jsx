@@ -1,14 +1,18 @@
 import React from "react"
 import "../Login/Login.css"
 import backButtonimg from "../../assets/img/back_login.png"
+import { Link } from 'react-router-dom'
+
 
 function Login() {
   return (
     <>
       <div className="container">
+        <Link to="/">
         <div className="arrowButton">
           <img src={backButtonimg} />
         </div>
+        </Link>
         <div className="loginCard">
           <div className="content">
             <div className="title">
@@ -33,9 +37,11 @@ function Login() {
               </div>
             </form>
           </div>
+          <Link to="/app">
           <button className="loginButton">
             <b>Log In</b>
           </button>
+          </Link>
         </div>
         <div className="noAccount">
           <p>
@@ -43,9 +49,11 @@ function Login() {
               Don't have an account:
             </b>
           </p>
+          <Link to="/signup">
           <button className="singUpBotton">
             <b>Sign Up</b>
           </button>
+          </Link>
         </div>
       </div>
     </>
