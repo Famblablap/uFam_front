@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,10 +12,15 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["APP", "ABOUT US", "FAQ", "SUPPORT"];
+const pages = [
+  { title: "APP", path: "/app" },
+  { title: "ABOUT US", path: "/aboutus" },
+  { title: "FAQ", path: "/faq" },
+  { title: "SUPPORT", path: "/support" },
+];
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -31,13 +37,13 @@ function Header() {
       elevation={0}
     >
       <Container maxWidth="xl">
-        <div></div>
         <Toolbar disableGutters sx={{ minHeight: "64px", padding: "8px 0" }}>
+
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={NavLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -51,7 +57,6 @@ function Header() {
           >
             uFam
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -82,35 +87,26 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                    <NavLink
+                      to={page.path}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      {page.title}
+                    </NavLink>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: "bold",
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            uFam
-          </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.title}
+                component={NavLink}
+                to={page.path}
                 sx={{
                   my: 2,
                   color: "white",
@@ -119,19 +115,21 @@ function Header() {
                   fontSize: "1.25rem",
                 }}
               >
-                {page}
+                {page.title}
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip>
-              <Box
+              <IconButton
+                component={NavLink}
+                to="/signup"
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "6px 16px",
+                  padding: "4px 16px",
                   borderRadius: "20px",
                   border: "2px solid",
                   borderColor: "white",
@@ -139,6 +137,7 @@ function Header() {
                   color: "white",
                   cursor: "pointer",
                   fontWeight: "bold",
+                  fontSize:"1rem",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor: "white",
@@ -147,7 +146,7 @@ function Header() {
                 }}
               >
                 CREATE FAMILY
-              </Box>
+              </IconButton>
             </Tooltip>
           </Box>
         </Toolbar>
@@ -155,4 +154,5 @@ function Header() {
     </AppBar>
   );
 }
+
 export default Header;
