@@ -18,6 +18,7 @@ import Notifications from "../Pages/App/Notifications";
 import Decalogue from "../Pages/App/Decalogue";
 import Settings from "../Pages/App/Settings";
 import Create from "../Pages/App/Create";
+import FamProfile from "../Pages/App/FamProfile";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
             {
                 path: "/app/profile",
                 element: <Profile/>
+            },
+            {
+                path: "/app/profile/:id",
+                element: <FamProfile/>
             },
             {
                 path: "/app/create",

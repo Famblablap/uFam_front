@@ -22,4 +22,8 @@
 .commentButton img {
   width: 25px;
 }
-  
+
+.user-option:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

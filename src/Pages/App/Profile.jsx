@@ -1,7 +1,10 @@
+import ProfileComponents from "../../Components/ProfileComponents/ProfileComponents";
+
+
 function Profile() {
   return (
-    <div>Profile</div>
+    <ProfileComponents/>
   )
 }
 
-export default Profile
+export default Profile;
