@@ -1,13 +1,13 @@
 import "./LeftSide.css"
-import message from "../../assets/icons/message_icon.png";
-import home from "../../assets/icons/home_icon.png";
-import profile from "../../assets/icons/user_profile_icon.png";
-import create from "../../assets/icons/create_icon.png";
-import family_email from "../../assets/icons/family_email_icon.png";
-import notifications from "../../assets/icons/notifications_icon.png";
-import decalogue from "../../assets/icons/decalogue_icon.png";
-import settings from "../../assets/icons/settings_icon.png";
-import logout from "../../assets/icons/logout_icon.png";
+import message from "../../assets/img/message_icon.png";
+import home from "../../assets/img/home_icon.png";
+import profile from "../../assets/img/user_profile_icon.png";
+import create from "../../assets/img/create_icon.png";
+import family_email from "../../assets/img/family_email_icon.png";
+import notifications from "../../assets/img/notifications_icon.png";
+import decalogue from "../../assets/img/decalogue_icon.png";
+import settings from "../../assets/img/settings_icon.png";
+import logout from "../../assets/img/logout_icon.png";
 import { Link } from "react-router-dom";
 
 

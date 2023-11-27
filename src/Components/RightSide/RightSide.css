@@ -1,27 +1,16 @@
 #rightside {
-    width: 300px;
+    width: 25%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: fixed;
     right: 0;
 }
 
-#familygroup {
+.familyGroup {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#familyicon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: #7209B7;
 }
