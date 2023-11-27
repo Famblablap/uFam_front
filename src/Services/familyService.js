@@ -1,6 +1,12 @@
 import api from "./config";
 
-export async function getAllFamProfiles () {
-    const response = await api.get("/families");
+export const getAllFamProfiles = async () => {
+    const response = await api.get("/families", {
+        headers: {
+            authorization: localStorage.getItem("token"),
+          },
+    });
     return response
 }
+
+

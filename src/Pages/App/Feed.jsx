@@ -1,5 +1,5 @@
 import { Avatar, Box, IconButton, Typography } from "@mui/material";
-import "../../Components/ProfileComponents/Feed.css";
+import "../../Components/FeedComponents/Feed.css";
 import like from "../../assets/img/Like.png";
 import comment from "../../assets/img/Comment.png";
 // import userProfile from "../../assets/img/user.png"
