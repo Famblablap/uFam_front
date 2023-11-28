@@ -19,6 +19,7 @@ import Decalogue from "../Pages/App/Decalogue";
 import Settings from "../Pages/App/Settings";
 import Create from "../Pages/App/Create";
 import Support from "../Pages/LandingPage/Support";
+import Contact from "../Pages/LandingPage/Contact";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/support",
         element: <Support />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

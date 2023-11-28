@@ -87,7 +87,7 @@ function Home() {
               </p>
               <IconButton
                 component={NavLink}
-                to="/signup"
+                to="/login"
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -165,7 +165,7 @@ function Home() {
               zIndex: 2,
             }}
           >
-            <Typography variant="h4" component="h2" gutterBottom>
+            <Typography variant="h5" component="h3" gutterBottom fontWeight={"bold"}>
               This is uFam!
             </Typography>
             <Typography variant="body1">

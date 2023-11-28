@@ -8,6 +8,7 @@ import {
   Alert,
 } from "@mui/material";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -127,6 +128,8 @@ function ContactForm() {
         sx={{ backgroundColor: "white" }}
       />
       <Button
+        component={NavLink}
+        to="/contact"
         type="submit"
         variant="contained"
         sx={{ mt: 2, backgroundColor: "#403f65" }}
