@@ -15,7 +15,7 @@ import Invitation from "../Pages/App/Invitation";
 import Messages from "../Pages/App/Messages";
 // import MessagesId from "../Pages/App/MessagesId";
 import Notifications from "../Pages/App/Notifications";
-import Decalogue from "../Pages/App/Decalogue";
+import Decalogue from "../Pages/LandingPage/Decalogue";
 import Settings from "../Pages/App/Settings";
 import Create from "../Pages/App/Create";
 import Support from "../Pages/LandingPage/Support";
@@ -56,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/decalogue",
+        element: <Decalogue/>,
       },
     ],
   },

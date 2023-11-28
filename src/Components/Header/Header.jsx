@@ -17,6 +17,7 @@ const pages = [
   { title: "ABOUT US", path: "/aboutus" },
   { title: "FAQ", path: "/faq" },
   { title: "SUPPORT", path: "/support" },
+  { title: "DECALOGUE", path: "/decalogue" },
 ];
 
 function Header() {

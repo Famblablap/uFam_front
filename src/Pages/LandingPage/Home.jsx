@@ -17,18 +17,18 @@ function Home() {
   const cards = [
     {
       id: 1,
-      heading: "Create Family",
-      text: "Sign up in our app, choose 'Create Family Account,' invite members, and enjoy a private shared space.",
+      heading: "Protect",
+      text: "Discover essential strategies to safeguard your family’s personal information on the internet, ensuring privacy and security in the digital realm.",
     },
     {
       id: 2,
-      heading: "How to post",
-      text: "Tap '+', select 'Upload' and share. It's quick, private, and secure.",
+      heading: "Balance",
+      text: "Explore effective ways to balance screen time with quality family moments, ensuring a healthy digital lifestyle for you and your loved ones.",
     },
     {
       id: 3,
-      heading: "Decalogue",
-      text: "Check our 'Decalogue' for family-friendly social media use.",
+      heading: "Footprints",
+      text: "An insightful piece on educating children about the concept of digital footprints, emphasizing the long-term impact of their online activities.",
     },
   ];
 
@@ -80,10 +80,16 @@ function Home() {
                 textAlign: "left",
               }}
             >
-              <h2>Welcome to uFam!</h2>
+              <h2>Welcome to uFam! 🏡✨</h2>
               <p>
-                Create lovely moments with your family <br></br>and help your
-                little ones to properly use social media.
+                Join us in creating treasured moments and <br></br>nurturing
+                digital wellness for every family member. 
+                <br />
+                <br>
+                </br>With uFam,
+                you can celebrate life's milestones, <br />big and small, on
+                a platform that values privacy,<br /> togetherness, and positive
+                online experiences.
               </p>
               <IconButton
                 component={NavLink}
@@ -165,12 +171,19 @@ function Home() {
               zIndex: 2,
             }}
           >
-            <Typography variant="h5" component="h3" gutterBottom fontWeight={"bold"}>
+            <Typography
+              variant="h5"
+              component="h3"
+              gutterBottom
+              fontWeight={"bold"}
+            >
               This is uFam!
             </Typography>
             <Typography variant="body1">
-              Create lovely moments with your family and help your little ones
-              to properly use social media.
+              Empower your little ones with the tools to flourish in the online
+              world, embracing technology with wisdom and joy 🌐👨‍👩‍👧‍👦 <br /> <br />Start your
+              family's adventure today and craft a legacy of happy and healthy
+              digital memories. 💌🚀
             </Typography>
           </Box>
         </Box>
