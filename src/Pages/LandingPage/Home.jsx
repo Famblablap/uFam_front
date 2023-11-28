@@ -30,7 +30,7 @@ function Home() {
       heading: "Decalogue",
       text: "Check our 'Decalogue' for family-friendly social media use.",
     },
-  ];
+  ]
 
   return (
     <>
@@ -43,7 +43,7 @@ function Home() {
             alignItems: "center",
             justifyContent: "center",
             flexWrap: "wrap",
-            minHeight: { xs: 'auto', sm: '60vh' },
+            minHeight: { xs: "auto", sm: "60vh" },
           }}
         >
           <Box
@@ -59,9 +59,9 @@ function Home() {
               style={{
                 maxWidth: "100%",
                 maxHeight: "100%",
-                width: 'auto',
-                height: 'auto',
-                objectFit: 'contain',
+                width: "auto",
+                height: "auto",
+                objectFit: "contain",
                 borderRadius: "20px",
               }}
             />
@@ -100,7 +100,7 @@ function Home() {
                   color: "white",
                   cursor: "pointer",
                   fontWeight: "bold",
-                  fontSize: "1.5rem",
+                  fontSize: "1.3rem",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor: "white",
@@ -113,16 +113,18 @@ function Home() {
             </Typography>
           </Box>
         </Box>
-        <Box id="landing-text"
+        <Box
+          id="landing-text"
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             justifyContent: "center",
             flexWrap: "wrap",
-            minHeight: { xs: 'auto', sm: '60vh' },
+            minHeight: { xs: "auto", sm: "60vh" },
             mt: { xs: 4, sm: 0 },
-          }}>
+          }}
+        >
           <Box
             sx={{
               position: "relative",
@@ -148,9 +150,9 @@ function Home() {
                 style={{
                   maxWidth: "100%",
                   maxHeight: "100%",
-                  width: 'auto',
-                  height: 'auto',
-                  objectFit: 'contain',
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
                   borderRadius: "20px",
                 }}
               />
@@ -232,20 +234,26 @@ function Home() {
             </Box>
           ))}
         </Box>
-        <Box id="landing-contact"
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          minHeight: { xs: 'auto', sm: '20vh' },
-        }}>
-          <ContactForm/>
+        <Box id="landing-contact">
+          <Box
+            sx={{
+              flex: 1,
+              bgcolor: "rgba(64, 103, 129, 0.40)",
+              borderRadius: 2,
+              border: "3px solid",
+              borderColor: "white",
+              color: "white",
+              p: 3,
+              m: 2,
+              textAlign: "left",
+            }}
+          >
+            <ContactForm />
+          </Box>
         </Box>
       </Container>
     </>
   );
 }
 
-export default Home;
+export default Home

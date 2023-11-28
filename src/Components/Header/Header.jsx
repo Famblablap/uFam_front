@@ -38,7 +38,6 @@ function Header() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ minHeight: "64px", padding: "8px 0" }}>
-
           <Typography
             variant="h6"
             noWrap
@@ -113,6 +112,11 @@ function Header() {
                   display: "block",
                   fontWeight: "bold",
                   fontSize: "1.25rem",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "#64c4ec",
+                  },
                 }}
               >
                 {page.title}
@@ -137,7 +141,7 @@ function Header() {
                   color: "white",
                   cursor: "pointer",
                   fontWeight: "bold",
-                  fontSize:"1rem",
+                  fontSize: "1rem",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor: "white",

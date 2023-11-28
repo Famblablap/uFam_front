@@ -1,92 +1,154 @@
 import React, { useState } from "react";
+import {
+  Box,
+  TextField,
+  Button,
+  Typography,
+  Snackbar,
+  Alert,
+} from "@mui/material";
+import axios from "axios";
 
-const FORM_ENDPOINT = "http://localhost:5173/support"; // TODO - update to the correct endpoint
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [formErrors, setFormErrors] = useState({});
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "info",
+  });
 
-const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const inputs = e.target.elements;
-    const data = {};
-
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].name) {
-        data[inputs[i].name] = inputs[i].value;
-      }
-    }
-
-    fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Form response was not ok');
-        }
-
-        setSubmitted(true);
-      })
-      .catch((err) => {
-        e.target.submit();
-      });
+  const validate = () => {
+    let tempErrors = {};
+    tempErrors.name = formData.name ? "" : "Name is required.";
+    tempErrors.email = formData.email
+      ? /\S+@\S+\.\S+/.test(formData.email)
+        ? ""
+        : "Email is not valid."
+      : "Email is required.";
+    tempErrors.message = formData.message ? "" : "Message is required.";
+    setFormErrors(tempErrors);
+    return Object.values(tempErrors).every((x) => x === "");
   };
 
-  if (submitted) {
-    return (
-      <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We'll be in touch soon.</div>
-      </>
-    );
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      const endpoint = "http://localhost:5174/api/contact";
+
+      axios
+        .post(endpoint, formData)
+        .then((response) => {
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+          setSnackbar({
+            open: true,
+            message: "Message sent successfully!",
+            severity: "success",
+          });
+        })
+        .catch((error) => {
+          setSnackbar({
+            open: true,
+            message: "An error occurred. Please try again later.",
+            severity: "error",
+          });
+        });
+    }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   return (
-    <form
-      action={FORM_ENDPOINT}
+    <Box
+      component="form"
+      noValidate
+      autoComplete="off"
       onSubmit={handleSubmit}
-      method="POST"
+      sx={{
+        mt: 0,
+        mb: 1.5,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        "& .MuiTextField-root": { m: 1, width: "25ch" },
+      }}
     >
-      <div className="pt-0 mb-3">
-        <input
-          type="text"
-          placeholder="Your name"
-          name="name"
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
-          required
-        />
-      </div>
-      <div className="pt-0 mb-3">
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
-          required
-        />
-      </div>
-      <div className="pt-0 mb-3">
-        <textarea
-          placeholder="Your message"
-          name="message"
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
-          required
-        />
-      </div>
-      <div className="pt-0 mb-3">
-        <button
-          className="active:bg-blue-600 hover:shadow-lg focus:outline-none px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-blue-500 rounded shadow outline-none"
-          type="submit"
-        >
-          Send a message
-        </button>
-      </div>
-    </form>
-  );
-};
+      <Typography variant="h4" gutterBottom fontWeight={"bold"}>
+        Contact Us
+      </Typography>
+      <TextField
+        required
+        error={!!formErrors.name}
+        helperText={formErrors.name}
+        name="name"
+        label="Name"
+        value={formData.name}
+        onChange={handleChange}
+        sx={{ backgroundColor: "white" }}
+      />
+      <TextField
+        required
+        error={!!formErrors.email}
+        helperText={formErrors.email}
+        name="email"
+        label="Email"
+        value={formData.email}
+        onChange={handleChange}
+        sx={{ backgroundColor: "white" }}
+      />
+      <TextField
+        required
+        error={!!formErrors.message}
+        helperText={formErrors.message}
+        name="message"
+        label="Message"
+        multiline
+        rows={4}
+        value={formData.message}
+        onChange={handleChange}
+        sx={{ backgroundColor: "white" }}
+      />
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{ mt: 2, backgroundColor: "#403f65" }}
+      >
+        SEND MESSAGE
+      </Button>
 
-export default ContactForm;
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          sx={{ width: "100%" }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
+    </Box>
+  );
+}
+
+export default ContactForm
