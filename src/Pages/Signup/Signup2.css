@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #D2E7FB;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    height: 90vh;
+    background-color: pink;
+}
+
+.signUpCard {
+    background-color: aqua;
+    width: 40vw;
+    height: 80vh;
+}
+
+.signUpCard2 {
+    background-color: aqua;
+    width: 40vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dogPhoto {
+    background-color: white;
+    width: 30vw;
+    height: 30vh;
+}
+
+.alreadyAccount {
+    background-color: white;
+    width: 30vw;
+    height: 30vh;
+}

@@ -14,7 +14,7 @@ function Signup() {
           </div>
         </Link>
         <div className="signupCard">
-          <div>
+          <div className="contentSignup">
             <div className="signupTitle">
               <p><b>Sign Up</b></p>
             </div>
