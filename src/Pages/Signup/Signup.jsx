@@ -8,13 +8,13 @@ function Signup() {
   return (
     <>
       <div className="containerSignup">
-        <Link to="/login">
+        <Link to="/">
           <div className="arrowButtonSignup">
             <img src={backButtonimgSignup} />
           </div>
         </Link>
-        <div className="signupCard">
-          <div className="contentSignup">
+        <div className="contentSignup">
+          <div className="signupCard">
             <div className="signupTitle">
               <p><b>Sign Up</b></p>
             </div>
@@ -35,7 +35,7 @@ function Signup() {
                 <label style={{ marginTop: "5px" }}><b>Surname:</b></label>
               </div>
               <div className="nameSurnameImnpuSignup">
-                <input style={{ marginRight: "100px" }}
+                <input style={{ marginRight: "50px" }}
                   id="nameSignup"
                   type="text"
                   placeholder="Enter your name">
@@ -84,19 +84,20 @@ function Signup() {
               </button>
             </Link>
           </div>
-        </div>
-        <div className="content2">
-          <img className="dogPhoto" src={dogPhoto} />
-          <div className="alreadyAccountSignup">
-
-            <p><b>Already have an account:</b></p>
-            <Link to="/login">
-              <button className="loginButtonSignup">
-                <b>Log in</b>
-              </button>
-            </Link>
+          <div className="signupCard2">
+            <img className="dogPhoto" src={dogPhoto} />
+            <div className="alreadyAccountSignup">
+              <p><b>Already have an account:</b></p>
+              <Link to="/login">
+                <button className="loginButtonSignup">
+                  <b>Log in</b>
+                </button>
+              </Link>
+            </div>
           </div>
+
         </div>
+
       </div>
     </>
   )
