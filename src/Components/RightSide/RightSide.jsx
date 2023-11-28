@@ -2,6 +2,7 @@ import { Avatar, Box, Typography } from "@mui/material"
 import "./RightSide.css"
 import { useEffect, useState } from "react";
 import { getAllFamProfiles } from "../../Services/familyService";
+import { Link } from "react-router-dom";
 
 function RigthSide() {
     const [family, setFamily] = useState([]);
@@ -20,8 +21,9 @@ function RigthSide() {
         <Typography>FamilyName</Typography>
         <Avatar sx={{width: 80, height: 80, marginBottom: 1}} className="familyIcon"/>
       </Box>
-      {family.map((familiar) => 
-      <Box key= {familiar.id}
+      {family.map((familiar) => (
+        <Link to={`/app/profile/${familiar.id}`} key= {familiar.id}>
+        <Box 
           sx={{
             display: "flex",
             alignItems: "center",
@@ -40,7 +42,8 @@ function RigthSide() {
           <Typography variant="subtitle1" fontWeight="bold">
             {familiar.name}
           </Typography>
-        </Box>)}
+        </Box></Link>
+      ))}
     </div>
   )
 }
