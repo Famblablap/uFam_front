@@ -7,7 +7,7 @@ function Invitation() {
   return (
     <>
       <div className="contatinerInvitation">
-        <Link to="/">
+        <Link to="/app">
           <div className="arrowButtonInvitation">
             <img src={backButtonimgInvitation} />
           </div>
