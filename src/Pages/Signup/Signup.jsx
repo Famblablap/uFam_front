@@ -1,7 +1,7 @@
 import React from "react"
 import "../Signup/Signup.css"
 import backButtonimgSignup from "../../assets/img/back_sign_up.png"
-import dogPhoto from "../../assets/img/Rectangle_63.png"
+import kidPhoto from "../../assets/img/little-girl-uses-laptop-while-sitting-room-with-neon-lighting.jpg"
 import { Link } from "react-router-dom"
 
 function Signup() {
@@ -85,7 +85,7 @@ function Signup() {
             </Link>
           </div>
           <div className="signupCard2">
-            <img className="dogPhoto" src={dogPhoto} />
+            <img className="dogPhoto" src={kidPhoto} />
             <div className="alreadyAccountSignup">
               <p><b>Already have an account:</b></p>
               <Link to="/login">

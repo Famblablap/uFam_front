@@ -11,7 +11,7 @@ import Privacy from "../Pages/LandingPage/Privacy";
 import Cookies from "../Pages/LandingPage/Cookies";
 import Legal from "../Pages/LandingPage/Legal";
 import Profile from "../Pages/App/Profile";
-import Invitation from "../Pages/App/Invitation";
+import Invitation from "../Pages/App/Invitation/Invitation";
 import Messages from "../Pages/App/Messages";
 // import MessagesId from "../Pages/App/MessagesId";
 import Notifications from "../Pages/App/Notifications";

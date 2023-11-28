@@ -28,10 +28,11 @@
 
 .signupCard2 {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 594px;
-    height: 600px;
+    height:550px;
 }
 
 .signupTitle {
@@ -67,7 +68,7 @@
 
 #nameSignup {
     background-color: #D2E7FB;
-    width: 200px;
+    width: 220px;
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
@@ -75,7 +76,7 @@
 
 #surnameSignup {
     background-color: #D2E7FB;
-    width: 200px;
+    width: 220px;
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
@@ -89,7 +90,7 @@
 
 #birthdaySignup {
     background-color: #D2E7FB;
-    width: 260px;
+    width: 220px;
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
@@ -168,7 +169,7 @@
 
 .dogPhoto {
     width: 500px;
-    height: 450px;
+    height: 550px;
     border-radius: 40px;
 }
 
