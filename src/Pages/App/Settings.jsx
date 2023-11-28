@@ -1,6 +1,8 @@
+import { Box } from "@mui/material"
+
 function Settings() {
   return (
-    <div>Settings</div>
+    <Box></Box>
   )
 }
 
