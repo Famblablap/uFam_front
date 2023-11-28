@@ -1,10 +1,42 @@
-import React from "react"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import "../Signup/Signup.css"
 import backButtonimgSignup from "../../assets/img/back_sign_up.png"
 import kidPhoto from "../../assets/img/little-girl-uses-laptop-while-sitting-room-with-neon-lighting.jpg"
 import { Link } from "react-router-dom"
+import { signup } from "../../Services/auth"
+
 
 function Signup() {
+  const [familyName, setFamilyName] = useState("")
+  const [name, setName] = useState("")
+  const [surname, setSurname] = useState("")
+  const [birthday, setBirthday] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [repeatPassword, setRepeatPassword] = useState("")
+
+  const navigate = useNavigate()
+
+  async function onSignUp(){
+    try{
+      const signUpResponse = await signup ({
+        familyName,
+        name,
+        surname,
+        birthday,
+        email,
+        password,
+        repeatPassword
+      })
+      if (signUpResponse) {
+        navigate("/app")
+      }
+    } catch (error) {
+      console.error("Profile incomplete", error)
+    }
+  }
+
   return (
     <>
       <div className="containerSignup">
@@ -27,7 +59,8 @@ function Signup() {
                 <input
                   id="familyNameSignup"
                   type="text"
-                  placeholder="Enter your Family Name">
+                  placeholder="Enter your Family Name"
+                  onChange={(e) => setFamilyName(e.target.value)}>
                 </input>
               </div>
               <div className="nameSurnameLabelSignup">
@@ -38,19 +71,22 @@ function Signup() {
                 <input style={{ marginRight: "50px" }}
                   id="nameSignup"
                   type="text"
-                  placeholder="Enter your name">
+                  placeholder="Enter your name"
+                  onChange={(e) => setName(e.target.value)}>
                 </input>
                 <input
                   id="surnameSignup"
                   type="text"
-                  placeholder="Enter your surname">
+                  placeholder="Enter your surname"
+                  onChange={(e) => setSurname(e.target.value)}>
                 </input>
               </div>
               <div className="birthdaySignup">
                 <label><b>Birthday:</b></label><br></br>
                 <input
                   id="birthdaySignup"
-                  type="date">
+                  type="date"
+                  onChange={(e) => setBirthday(e.target.value)}>
                 </input>
               </div>
               <div className="emailSignup">
@@ -58,7 +94,8 @@ function Signup() {
                 <input
                   id="emailSignup"
                   type="email"
-                  placeholder="Enter your email">
+                  placeholder="Enter your email"
+                  onChange={(e) => setEmail(e.target.value)}>
                 </input>
               </div>
               <div className="passwordSignup">
@@ -66,7 +103,8 @@ function Signup() {
                 <input
                   id="passwordSignup"
                   type="password"
-                  placeholder="Enter your password">
+                  placeholder="Enter your password"
+                  onChange={(e) => setPassword(e.target.value)}>
                 </input>
               </div>
               <div className="repasswordSignup">
@@ -74,18 +112,17 @@ function Signup() {
                 <input
                   id="repasswordSignup"
                   type="password"
-                  placeholder="Repeat your email">
+                  placeholder="Repeat your email"
+                  onChange={(e) => setRepeatPassword(e.target.value)}>
                 </input>
               </div>
             </form>
-            <Link to="/">
-              <button className="signupButtonSignup">
+              <button onClick={() => onSignUp()}className="signupButtonSignup">
                 <b>Sign Up</b>
               </button>
-            </Link>
           </div>
           <div className="signupCard2">
-            <img className="dogPhoto" src={kidPhoto} />
+            <img className="kidPhoto" src={kidPhoto} />
             <div className="alreadyAccountSignup">
               <p><b>Already have an account:</b></p>
               <Link to="/login">

@@ -1,9 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import "../Login/Login.css"
 import arrowButtonLogin from "../../assets/img/back_login.png"
 import { Link } from 'react-router-dom'
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 import { login } from "../../Services/auth"
 
 
