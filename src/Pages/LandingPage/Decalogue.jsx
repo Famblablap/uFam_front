@@ -22,38 +22,114 @@ function Decalogue() {
       </Typography>
       <List>
         <ListItem>
-          <ListItemText primary="1. Be Kind Online - Treat others as you would like to be treated. Kindness is key." />
+          <ListItemText
+            primary={
+              <>
+                <b>1. Be Kind Online</b>
+                <br /> Treat others as you would like to be treated. Kindness is
+                key.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="2. Privacy is Precious - Keep your personal information private and safe." />
+          <ListItemText
+            primary={
+              <>
+                <b>2. Privacy is Precious</b>
+                <br /> Keep your personal information private and safe.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="3. Pause Before You Post - Think about the impact of your words and actions online." />
+          <ListItemText
+            primary={
+              <>
+                <b>3. Pause Before You Post</b>
+                <br /> Think about the impact of your words and actions online.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="4. Respect Boundaries - Ask for permission before sharing others' information or photos." />
+          <ListItemText
+            primary={
+              <>
+                <b>4. Respect Boundaries</b>
+                <br /> Ask for permission before sharing others' information or
+                photos.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="5. Balance Your Time - Make time for offline activities and enjoy the world outside screens." />
+          <ListItemText
+            primary={
+              <>
+                <b>5. Balance Your Time</b>
+                <br /> Make time for offline activities and enjoy the world
+                outside screens.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="6. Speak Up About Bullying - If you witness bullying, tell a trusted adult." />
+          <ListItemText
+            primary={
+              <>
+                <b>6. Speak Up About Bullying</b>
+                <br /> If you witness bullying, tell a trusted adult.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="7. Be a Critical Thinker - Don't believe everything you see online; research and question." />
+          <ListItemText
+            primary={
+              <>
+                <b>7. Be a Critical Thinker</b>
+                <br /> Don't believe everything you see online; research and
+                question.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="8. Positive Vibes Only - Use social media to spread positivity and good vibes." />
+          <ListItemText
+            primary={
+              <>
+                <b>8. Positive Vibes Only</b>
+                <br /> Use social media to spread positivity and good vibes.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="9. Take a Break - If social media feels overwhelming, it's okay to step back." />
+          <ListItemText
+            primary={
+              <>
+                <b>9. Take a Break</b>
+                <br /> If social media feels overwhelming, it's okay to step
+                back.
+              </>
+            }
+          />
         </ListItem>
         <ListItem>
-          <ListItemText primary="10. Ask for Help - If something online makes you uncomfortable, talk to an adult." />
+          <ListItemText
+            primary={
+              <>
+                <b>10. Ask for Help</b>
+                <br /> If something online makes you uncomfortable, talk to an
+                adult.
+              </>
+            }
+          />
         </ListItem>
       </List>
     </Box>
-  )
+  );
 }
 
 export default Decalogue;
