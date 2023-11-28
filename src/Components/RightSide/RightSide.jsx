@@ -3,6 +3,7 @@ import "./RightSide.css"
 import { useEffect, useState } from "react";
 import { getAllFamProfiles } from "../../Services/familyService";
 import { Link } from "react-router-dom";
+import addFam from "../../assets/img/add_fam.png"
 
 function RigthSide() {
     const [family, setFamily] = useState([]);
@@ -28,7 +29,7 @@ function RigthSide() {
             display: "flex",
             alignItems: "center",
             padding: 0.5,
-            width: "200px",
+            width: "250px",
             "&:hover": {
               cursor: "pointer",
             }
@@ -44,6 +45,24 @@ function RigthSide() {
           </Typography>
         </Box></Link>
       ))}
+      <Box 
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            padding: 0.5,
+            width: "250px",
+            "&:hover": {
+              cursor: "pointer",
+            }
+          }}
+        >
+          <Avatar src= {addFam}
+            style={{ width: 40, height: 40, marginRight: 2 }}
+          />
+          <Typography variant="subtitle1" fontWeight="bold" sx={{color: "#7209B7"}}>
+            Add familiar
+          </Typography>
+        </Box>
     </div>
   )
 }

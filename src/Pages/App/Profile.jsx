@@ -106,7 +106,7 @@ function Profile() {
         </Box>
 
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <img src={settings} />
+          <img src={settings} style={{ width: 40, height: 40}}/>
         </Box>
       </Box>
       <Box
@@ -118,7 +118,7 @@ function Profile() {
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("PHOTOS")}>
-          <img src={photos} />
+          <img src={photos} style={{ width: 40, height: 40}}/>
           <Typography
             className="user-option"
             fontWeight="bold"
@@ -128,7 +128,7 @@ function Profile() {
           </Typography>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("VIDEOS")}>
-          <img src={videos} />
+          <img src={videos} style={{ width: 40, height: 40}}/>
           <Typography
             className="user-option"
             fontWeight="bold"
@@ -138,7 +138,7 @@ function Profile() {
           </Typography>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("BLOG")}>
-          <img src={blog} />
+          <img src={blog} style={{ width: 40, height: 40}}/>
           <Typography
             className="user-option"
             fontWeight="bold"

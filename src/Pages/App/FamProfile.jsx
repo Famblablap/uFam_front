@@ -6,15 +6,15 @@ import {
   ImageListItem,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
-
 import userAvatar from "../../assets/img/user.png";
 import photos from "../../assets/img/photo_profile_icon.png";
 import videos from "../../assets/img/videos_profile_icon.png";
 import blog from "../../assets/img/blog_profile_icon.png";
-import settings from "../../assets/img/settings_icon.png";
+import message from "../../assets/img/message_icon.png";
 import "../../Components/FeedComponents/Feed.css";
 import { useEffect, useState } from "react";
 import { getFamProfile } from "../../Services/user";
+
 const userImages = [
   {
     id: 1,
@@ -107,7 +107,7 @@ function FamProfile() {
           </Box>
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <img src={settings} />
+            <img src={message} style={{ width: 40, height: 40}}/>
           </Box>
         </Box>
         <Box
@@ -119,7 +119,7 @@ function FamProfile() {
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <img src={photos} />
+            <img src={photos} style={{ width: 40, height: 40}}/>
             <Typography
               className="user-option"
               fontWeight="bold"
@@ -132,7 +132,7 @@ function FamProfile() {
             sx={{ display: "flex", alignItems: "center" }}
             onClick={() => handleOptionClick("VIDEOS")}
           >
-            <img src={videos} />
+            <img src={videos} style={{ width: 40, height: 40}}/>
             <Typography
               className="user-option"
               fontWeight="bold"
@@ -145,7 +145,7 @@ function FamProfile() {
             sx={{ display: "flex", alignItems: "center" }}
             onClick={() => handleOptionClick("BLOG")}
           >
-            <img src={blog} />
+            <img src={blog} style={{ width: 40, height: 40}}/>
             <Typography
               className="user-option"
               fontWeight="bold"
