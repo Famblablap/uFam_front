@@ -1,6 +1,6 @@
 import React from "react"
 import "../Login/Login.css"
-import backButtonimgLogin from "../../assets/img/back_login.png"
+import arrowButtonLogin from "../../assets/img/back_login.png"
 import { Link } from 'react-router-dom'
 
 
@@ -10,7 +10,7 @@ function Login() {
       <div className="containerLogin">
         <Link to="/">
           <div className="arrowButtonLogin">
-            <img src={backButtonimgLogin} />
+            <img src={arrowButtonLogin} />
           </div>
         </Link>
         <div className="loginCard">
