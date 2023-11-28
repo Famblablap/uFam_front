@@ -30,7 +30,7 @@ function Signup() {
         repeatPassword
       })
       if (signUpResponse) {
-        navigate("/app")
+        navigate("/login")
       }
     } catch (error) {
       console.error("Profile incomplete", error)
