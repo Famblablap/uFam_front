@@ -30,7 +30,7 @@ function Home() {
       heading: "Decalogue",
       text: "Check our 'Decalogue' for family-friendly social media use.",
     },
-  ]
+  ];
 
   return (
     <>
@@ -123,61 +123,58 @@ function Home() {
             flexWrap: "wrap",
             minHeight: { xs: "auto", sm: "60vh" },
             mt: { xs: 4, sm: 0 },
+            position: "relative",
+            paddingLeft: "20%",
           }}
         >
           <Box
             sx={{
-              position: "relative",
+              flex: 1,
               display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              alignItems: "center",
-              justifyContent: "center",
-              my: 4,
+              m: 0,
             }}
           >
-            <Box
-              sx={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                m: 2,
+            <img
+              src={turtle}
+              alt="Family"
+              style={{
+                maxWidth: "65%",
+                maxHeight: "50%",
+                width: "auto",
+                height: "auto",
+                objectFit: "contain",
+                borderRadius: "20px",
               }}
-            >
-              <img
-                src={turtle}
-                alt="Family"
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                  width: "auto",
-                  height: "auto",
-                  objectFit: "contain",
-                  borderRadius: "20px",
-                }}
-              />
-            </Box>
-            <Box
-              sx={{
-                flex: 1,
-                bgcolor: "rgba(64, 103, 129, 0.40)",
-                borderRadius: 2,
-                border: "3px solid",
-                borderColor: "white",
-                color: "white",
-                p: 3,
-                m: 2,
-                textAlign: "left",
-              }}
-            >
-              <h2>This is uFam!</h2>
-              <p>
-                Create lovely moments with your family <br></br>and help your
-                little ones to properly use social media.
-              </p>
-            </Box>
+            />
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              top: { sm: "50%" },
+              left: { sm: "75%" },
+              transform: { sm: "translate(-50%, -50%)" },
+              bgcolor: "rgba(64, 103, 129, 0.40)",
+              borderRadius: 2,
+              border: "3px solid",
+              borderColor: "white",
+              color: "white",
+              p: 3,
+              m: 0,
+              textAlign: "left",
+              width: { sm: "30%" },
+              zIndex: 2,
+            }}
+          >
+            <Typography variant="h4" component="h2" gutterBottom>
+              This is uFam!
+            </Typography>
+            <Typography variant="body1">
+              Create lovely moments with your family and help your little ones
+              to properly use social media.
+            </Typography>
           </Box>
         </Box>
+
         <Box
           id="landing-faq"
           sx={{
@@ -256,4 +253,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;
