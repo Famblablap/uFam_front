@@ -18,6 +18,7 @@ import Notifications from "../Pages/App/Notifications";
 import Decalogue from "../Pages/App/Decalogue";
 import Settings from "../Pages/App/Settings";
 import Create from "../Pages/App/Create";
+import { redirect } from "react-router-dom";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -55,7 +56,8 @@ const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <Login/>
+        element: <Login/>, 
+
     },
     {
         path: "/app",

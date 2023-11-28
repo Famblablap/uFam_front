@@ -2,9 +2,32 @@ import React from "react"
 import "../Login/Login.css"
 import arrowButtonLogin from "../../assets/img/back_login.png"
 import { Link } from 'react-router-dom'
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { login } from "../../Services/auth"
+
 
 
 function Login() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [errorMessage, setErrorMessage] = useState(false)
+
+  const navigate = useNavigate()
+
+  async function onLogin() {
+    try {
+      const loginResponse = await login({ email, password })
+      if (loginResponse.token) {
+        localStorage.setItem("token", loginResponse.token)
+        navigate("/app")
+      } 
+    } catch (error) {
+      setErrorMessage(true)
+      console.error("Credenciales incorrectas", error)
+    }
+  }
+
   return (
     <>
       <div className="containerLogin">
@@ -25,6 +48,7 @@ function Login() {
                   id="emailLogin"
                   type="email"
                   placeholder="Enter your email"
+                  onChange={(e) => {setEmail(e.target.value); setErrorMessage(false)}}
                 ></input>
               </div>
               <div className="passwordLogin">
@@ -33,15 +57,15 @@ function Login() {
                   id="passwordLogin"
                   type="password"
                   placeholder="Enter your password"
+                  onChange={(e) => {setPassword(e.target.value); setErrorMessage(false)}}
                 ></input> <br></br>
               </div>
             </form>
           </div>
-          <Link to="/app">
-            <button className="loginButtonLogin">
-              <b>Log In</b>
-            </button>
-          </Link>
+          {errorMessage && <h4>Ups! Your creds are wrong. Try again!</h4>}
+          <button onClick={() => onLogin()} className="loginButtonLogin">
+            <b>Log In</b>
+          </button>
         </div>
         <div className="noAccountLogin">
           <p>
