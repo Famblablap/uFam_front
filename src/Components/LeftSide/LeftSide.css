@@ -1,0 +1,39 @@
+#leftside {
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    background-color: #f0f0f0;
+}
+
+.menu_option {
+    width: 100%;
+    text-align: start;
+    color: #7209B7;
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    text-decoration: none;
+}
+
+.menu_option:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.icon {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

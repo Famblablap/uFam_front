@@ -1,0 +1,29 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.imagePost {
+    position: relative; 
+    z-index: 0; 
+}
+
+.postInteractions {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+}
+
+.likeButton img,
+.commentButton img {
+  width: 25px;
+}
+
+.user-option:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

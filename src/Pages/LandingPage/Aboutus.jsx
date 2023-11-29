@@ -1,9 +1,7 @@
-import "../../Components/HomeComponent/HomeComponent.css"
-
 function Aboutus() {
   return (
     <>
-    <div>Aboutus</div>
+    <div>About Us</div>
     </>
     
   )
