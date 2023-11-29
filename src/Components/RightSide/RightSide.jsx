@@ -45,6 +45,7 @@ function RigthSide() {
           </Typography>
         </Box></Link>
       ))}
+      <Link to="/app/invitation"><div className="menu_option"><img src={addFam} className="icon"/>Add Family</div></Link>
       <Box 
           sx={{
             display: "flex",
@@ -56,12 +57,6 @@ function RigthSide() {
             }
           }}
         >
-          <Avatar src= {addFam}
-            style={{ width: 40, height: 40, marginRight: 2 }}
-          />
-          <Typography variant="subtitle1" fontWeight="bold" sx={{color: "#7209B7"}}>
-            Add familiar
-          </Typography>
         </Box>
     </div>
   )
