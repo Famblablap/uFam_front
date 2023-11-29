@@ -9,12 +9,3 @@ export const getAllFamProfiles = async () => {
     return response
 }
 
-export const sedInvitation = async () => {
-    const response = await api.post("/families/sendInvitation", {
-        headers: {
-            authorization: localStorage.getItem("token"),
-        },
-    });
-    return response
-}
-

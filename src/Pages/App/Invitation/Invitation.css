@@ -8,14 +8,6 @@
     align-items: center;
 }
 
-/* .contentInvitation {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color:#d4abf0;
-} */
-
 .invitationBox {
     display: flex;
     justify-self: center;
@@ -75,7 +67,7 @@
     color: #000000;
     background-color: #d4abf0;
     transition: #000000 0.3s ease;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .sendInvitationButton:hover {
@@ -87,3 +79,9 @@
     display: flex;
     justify-content: center;
 }
+ .invSent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ }
