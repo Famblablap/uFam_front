@@ -79,32 +79,13 @@ function Settings() {
           name="surname"
           sx={{ marginTop: "2%", width: "80%" }}
         />
-        {/* <KeyboardDatePicker
-          disableToolbar
-          variant="inline"
-          format="MM/dd/yyyy"
-          margin="normal"
-          id="date-picker-inline"
-          label="Date picker inline"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        /> */}
         <TextField
-          label="Birthdate"
           required
           name="birthdate"
-          type="birthdate"
+          type="date"
           id="birthdate"
           sx={{marginTop: "2%", width: "80%"}}
         />
-        {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DemoContainer components={["DateField"]}>
-            <DateField label="Basic date field" />
-          </DemoContainer>
-        </LocalizationProvider> */}
         <TextField
           label="Password"
           required
