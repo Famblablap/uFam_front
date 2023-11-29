@@ -1,9 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Invitation.css"
-import backButtonimgInvitation from "../../../assets/img/back_violeta.png"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { sendInvitation } from "../../../Services/sendInvitation"
+
 
 function Invitation() {
+  const [email, setEmail] = useState("")
+
+  const navigate = useNavigate()
+
+  async function sendInv(){
+    try {
+      const invitationResponse = await sendInvitation(email)
+    
+    } catch (error) {
+      console.error("Send Invitation error", error)
+    }
+  }
+
   return (
     <>
       <div className="contatinerInvitation">
@@ -20,12 +35,13 @@ function Invitation() {
                 <input
                   id="emailInvitation"
                   type="email"
-                  placeholder="Enter email">
+                  placeholder="Enter email"
+                  onChange={(e) => {setEmail(e.target.value)}}>
                 </input>
             </div>
             <div className="buttonBox">
             <Link to="/app/invitation">
-              <button className="sendInvitationButton">
+              <button onClick={() => sendInv()}className="sendInvitationButton">
                 <b>Send Invitation</b>
               </button>
             </Link>
