@@ -1,4 +1,3 @@
-import axios from "axios"
 import api from "./config"
 
 export const createPhoto = async (photoData) => {

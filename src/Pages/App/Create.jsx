@@ -9,21 +9,6 @@ function Create() {
   const cloud_name = "dehapq68a"
   const fileInputRef = useRef(null)
   const [uploadSuccess, setUploadSuccess] = useState(false)
-  const [url, setUrl] = useState("")
-
-//   async function updateContent (){
-//     const {data} = await createPhoto()
-//     console.log(data)
-//   }
-
-// const handleHola = async () => {
-//   try {
-//     const updatedUrl = { url }
-//     await updateProfile(updatedUserData)
-//   } catch (error) {
-//     console.error("Error submitting user")
-//   }
-// }
 
   const handleUploadClick = () => {
     fileInputRef.current.click()
