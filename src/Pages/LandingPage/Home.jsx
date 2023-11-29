@@ -83,13 +83,11 @@ function Home() {
               <h2>Welcome to uFam! 🏡✨</h2>
               <p>
                 Join us in creating treasured moments and <br></br>nurturing
-                digital wellness for every family member. 
+                digital wellness for every family member.
                 <br />
-                <br>
-                </br>With uFam,
-                you can celebrate life's milestones, <br />big and small, on
-                a platform that values privacy,<br /> togetherness, and positive
-                online experiences.
+                <br></br>With uFam, you can celebrate life's milestones, <br />
+                big and small, on a platform that values privacy,
+                <br /> togetherness, and positive online experiences.
               </p>
               <IconButton
                 component={NavLink}
@@ -128,47 +126,19 @@ function Home() {
             justifyContent: "center",
             flexWrap: "wrap",
             minHeight: { xs: "auto", sm: "60vh" },
-            mt: { xs: 4, sm: 0 },
-            position: "relative",
-            paddingLeft: "20%",
           }}
         >
           <Box
             sx={{
               flex: 1,
-              display: "flex",
-              m: 0,
-            }}
-          >
-            <img
-              src={turtle}
-              alt="Family"
-              style={{
-                maxWidth: "65%",
-                maxHeight: "50%",
-                width: "auto",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "20px",
-              }}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: { sm: "50%" },
-              left: { sm: "75%" },
-              transform: { sm: "translate(-50%, -50%)" },
               bgcolor: "rgba(64, 103, 129, 0.40)",
               borderRadius: 2,
               border: "3px solid",
               borderColor: "white",
               color: "white",
               p: 3,
-              m: 0,
+              m: 2,
               textAlign: "left",
-              width: { sm: "30%" },
-              zIndex: 2,
             }}
           >
             <Typography
@@ -181,13 +151,29 @@ function Home() {
             </Typography>
             <Typography variant="body1">
               Empower your little ones with the tools to flourish in the online
-              world, embracing technology with wisdom and joy 🌐👨‍👩‍👧‍👦 <br /> <br />Start your
-              family's adventure today and craft a legacy of happy and healthy
-              digital memories. 💌🚀
+              world, embracing technology with wisdom and joy 🌐👨‍👩‍👧‍👦 <br /> <br />
+              Start your family's adventure today and craft a legacy of happy
+              and healthy digital memories. 💌🚀
             </Typography>
           </Box>
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src={turtle}
+              alt="Family"
+              style={{
+                maxWidth: "100%",
+                height: "50vh",
+                borderRadius: "20px",
+              }}
+            />
+          </Box>
         </Box>
-
         <Box
           id="landing-faq"
           sx={{

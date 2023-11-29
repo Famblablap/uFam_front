@@ -5,7 +5,7 @@ export const getAllFamMessages = async () => {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    });
+    })
     console.log(response)
     return response
 }
@@ -16,7 +16,7 @@ export const getOneFamMessages = async (id) => {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    });
+    })
     return response
 }
 
@@ -25,7 +25,7 @@ export const createMessage = async (id) => {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    });
+    })
     return response
 }
 
@@ -34,6 +34,6 @@ export const deleteMessage = async (id) => {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    });
+    })
     return response
 }
