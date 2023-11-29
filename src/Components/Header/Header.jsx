@@ -13,23 +13,22 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
-  { title: "APP", path: "/app" },
   { title: "ABOUT US", path: "/aboutus" },
   { title: "FAQ", path: "/faq" },
   { title: "SUPPORT", path: "/support" },
   { title: "DECALOGUE", path: "/decalogue" },
-];
+]
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null)
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+    setAnchorElNav(event.currentTarget)
+  }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+    setAnchorElNav(null)
+  }
 
   return (
     <AppBar
@@ -157,7 +156,7 @@ function Header() {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+  )
 }
 
-export default Header;
+export default Header

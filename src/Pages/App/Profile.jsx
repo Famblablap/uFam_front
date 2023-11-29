@@ -14,6 +14,7 @@ import settings from "../../assets/img/settings_icon.png";
 import "../../Components/FeedComponents/Feed.css";
 import { useEffect, useState } from "react";
 import { getProfile } from "../../Services/user";
+import { Link } from "react-router-dom";
 
 const userImages = [
   {
@@ -102,12 +103,12 @@ function Profile() {
             alt="User Avatar"
             src={userAvatar}
           />
-          <Typography variant="h6">{profile.name}</Typography>
+          <Typography variant="h6">{profile.name} {profile.surname}</Typography>
         </Box>
 
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Link to={"/app/settings"}><Box sx={{ display: "flex", alignItems: "center" }}>
           <img src={settings} style={{ width: 40, height: 40}}/>
-        </Box>
+        </Box></Link>
       </Box>
       <Box
         sx={{

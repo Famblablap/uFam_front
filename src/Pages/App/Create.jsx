@@ -1,20 +1,36 @@
 import React, { useRef, useState } from "react";
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import AddIcon from "../../assets/Vector.png"; // Make sure the path is correct
 import axios from "axios";
+import { createPhoto } from "../../Services/content";
 
 function Create() {
-  const preset_key = "r8cu4l86";
-  const cloud_name = "dehapq68a";
-  const fileInputRef = useRef(null);
-  const [uploadSuccess, setUploadSuccess] = useState(false);
+  const preset_key = "r8cu4l86"
+  const cloud_name = "dehapq68a"
+  const fileInputRef = useRef(null)
+  const [uploadSuccess, setUploadSuccess] = useState(false)
+  const [url, setUrl] = useState("")
+
+//   async function updateContent (){
+//     const {data} = await createPhoto()
+//     console.log(data)
+//   }
+
+// const handleHola = async () => {
+//   try {
+//     const updatedUrl = { url }
+//     await updateProfile(updatedUserData)
+//   } catch (error) {
+//     console.error("Error submitting user")
+//   }
+// }
 
   const handleUploadClick = () => {
-    fileInputRef.current.click();
-  };
+    fileInputRef.current.click()
+  }
 
   const handleFile = (e) => {
-    setUploadSuccess(false);
+    setUploadSuccess(false)
     const file = e.target.files[0]
     const formData = new FormData()
     formData.append("file", file)
@@ -26,14 +42,22 @@ function Create() {
         formData
       )
       .then((response) => {
-        console.log(response)
-        setUploadSuccess(true);
+        const photoUrl = response.data.secure_url;
+        createPhoto({ photo_url: photoUrl })
+          .then(() => {
+            setUploadSuccess(true)
+          })
+          .catch((serverError) => {
+            console.error('Error saving photo to user profile', serverError);
+            setUploadSuccess(false)
+          })
       })
-      .catch((err) => {
-        console.log(err)
+      .catch((cloudinaryError) => {
+        console.error('Error uploading to Cloudinary', cloudinaryError)
         setUploadSuccess(false)
-      });
-  };
+      })
+  }
+  
 
   return (
     <Box
@@ -108,9 +132,12 @@ function Create() {
             Content posted correctly!!
           </Typography>
         )}
+        <Button>
+          <p>hola</p>
+        </Button>
       </Box>
     </Box>
-  );
+  )
 }
 
 export default Create

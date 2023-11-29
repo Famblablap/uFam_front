@@ -5,7 +5,7 @@ import Home from "../Pages/LandingPage/Home";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
 import Feed from "../Pages/App/Feed";
-import Faq from "../Pages/LandingPage/Faq";
+import Faq from "../Pages/LandingPage/Faqweb";
 import Aboutus from "../Pages/LandingPage/Aboutus";
 import Privacy from "../Pages/LandingPage/Privacy";
 import Cookies from "../Pages/LandingPage/Cookies";

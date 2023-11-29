@@ -5,7 +5,7 @@ export const getAllFamProfiles = async () => {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    });
+    })
     return response
 }
 

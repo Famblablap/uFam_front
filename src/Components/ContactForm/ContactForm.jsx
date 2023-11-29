@@ -15,39 +15,39 @@ function ContactForm() {
     name: "",
     email: "",
     message: "",
-  });
-  const [formErrors, setFormErrors] = useState({});
+  })
+  const [formErrors, setFormErrors] = useState({})
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
     severity: "info",
-  });
+  })
 
   const validate = () => {
-    let tempErrors = {};
-    tempErrors.name = formData.name ? "" : "Name is required.";
+    let tempErrors = {}
+    tempErrors.name = formData.name ? "" : "Name is required."
     tempErrors.email = formData.email
       ? /\S+@\S+\.\S+/.test(formData.email)
         ? ""
         : "Email is not valid."
-      : "Email is required.";
-    tempErrors.message = formData.message ? "" : "Message is required.";
-    setFormErrors(tempErrors);
-    return Object.values(tempErrors).every((x) => x === "");
-  };
+      : "Email is required."
+    tempErrors.message = formData.message ? "" : "Message is required."
+    setFormErrors(tempErrors)
+    return Object.values(tempErrors).every((x) => x === "")
+  }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (validate()) {
-      const endpoint = "http://localhost:5174/api/contact";
+      const endpoint = "http://localhost:5174/api/contact"
 
       axios
         .post(endpoint, formData)
@@ -56,26 +56,26 @@ function ContactForm() {
             name: "",
             email: "",
             message: "",
-          });
+          })
           setSnackbar({
             open: true,
             message: "Message sent successfully!",
             severity: "success",
-          });
+          })
         })
         .catch((error) => {
           setSnackbar({
             open: true,
             message: "An error occurred. Please try again later.",
             severity: "error",
-          });
-        });
+          })
+        })
     }
-  };
+  }
 
   const handleCloseSnackbar = () => {
     setSnackbar({ ...snackbar, open: false });
-  };
+  }
 
   return (
     <Box
@@ -151,7 +151,7 @@ function ContactForm() {
         </Alert>
       </Snackbar>
     </Box>
-  );
+  )
 }
 
 export default ContactForm
