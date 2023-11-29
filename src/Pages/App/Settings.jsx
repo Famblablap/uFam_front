@@ -1,5 +1,7 @@
 import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
-import { DateField, LocalizationProvider } from "@mui/x-date-pickers";
+import { useEffect, useState } from "react";
+import { updateUser } from "../../Services/user";
+
 // import React from "react";
 
 function Settings() {
@@ -8,6 +10,38 @@ function Settings() {
   // const handleDateChange = (date) => {
   //   setSelectedDate(date);
   // };
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [birthdate, setBirthdate] = useState("");
+  const [password, setPassword] = useState("");
+
+
+  async function updateProfile(updatedUserData) {
+    const { data } = await updateUser(updatedUserData);
+    console.log (data)
+  }
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const handleSurnameChange = (e) => {
+    setSurname(e.target.value);
+  };
+  const handleBirthdateChange = (e) => {
+    setBirthdate(e.target.value);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const updatedUserData = { name, surname, birthdate, password };
+      await updateProfile(updatedUserData);
+    } catch (error) {
+      console.error("Error submitting user");
+    }
+  };
 
   return (
     <Box
@@ -24,7 +58,10 @@ function Settings() {
       }}
     >
       <Box sx={{ textAlign: "start", width: "100%" }}>
-        <Typography sx={{ marginLeft: "5%" }} fontWeight="bold">
+        <Typography
+          sx={{ marginLeft: "5%", marginBottom: "5%" }}
+          fontWeight="bold"
+        >
           EDIT PROFILE:
         </Typography>
       </Box>
@@ -39,7 +76,7 @@ function Settings() {
           backgroundColor: "rgba(114, 9, 183, 0.35)",
         }}
       >
-        <Typography variant="subtitle2" fontWeight="bold" margin={"3%"}>
+        <Typography variant="subtitle2" fontWeight="bold" margin={"2.5%"}>
           Choose your profile photo:
         </Typography>
         <Box
@@ -65,36 +102,68 @@ function Settings() {
           width: "100%",
         }}
       >
+        <Typography sx={{ marginTop: "2%", width: "80%" }}>Name:</Typography>
         <TextField
-          label="Name"
+          label="Enter your name"
           required
           id="name"
           name="name"
-          sx={{ marginTop: "2%", width: "80%" }}
+          sx={{ width: "80%" }}
+          onChange={handleNameChange}
         />
+        <Typography sx={{ marginTop: "2%", width: "80%" }}>Surname:</Typography>
         <TextField
-          label="Surname"
+          label="Enter your surname"
           required
           id="surname"
           name="surname"
-          sx={{ marginTop: "2%", width: "80%" }}
+          sx={{ width: "80%"}}
+          onChange={handleSurnameChange}
         />
+        <Typography sx={{ marginTop: "2%", width: "80%" }}>
+          Birthdate:
+        </Typography>
         <TextField
           required
           name="birthdate"
           type="date"
           id="birthdate"
-          sx={{marginTop: "2%", width: "80%"}}
+          sx={{ width: "80%" }}
+          onChange={handleBirthdateChange}
         />
+        <Typography sx={{ marginTop: "2%", width: "80%" }}>
+          Password:
+        </Typography>
         <TextField
-          label="Password"
+          label="Change your password"
           required
           name="password"
           type="password"
           id="password"
-          sx={{ marginTop: "2%", width: "80%" }}
+          sx={{ width: "80%"}}
+          onChange={handlePasswordChange}
         />
-        <Button sx={{ mt: 3, mb: 2 }}>Sign In</Button>
+        <Button
+          sx={{
+            marginTop: "10px",
+            width: "120px",
+            height: "40px",
+            border: "3px solid black",
+            borderRadius: "30px",
+            color: "black",
+            backgroundColor: "rgba(114, 9, 183, 0.35)",
+            "&:hover": {
+              backgroundColor: "white",
+              color: "#7209B7",
+              border: "3px solid #7209B7",
+            },
+          }}
+          onClick={handleSubmit}
+        >
+          <b>Submit</b>
+        </Button>
+
+
       </Box>
     </Box>
   );

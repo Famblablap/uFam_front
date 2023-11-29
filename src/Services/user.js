@@ -18,17 +18,18 @@ export const getFamProfile = async (id) => {
     return response
 }
 
-export const updateUser = async (id) => {
-    const response = await api.get(`/user/${id}`, {
+export const updateUser = async (updatedUserData) => {
+    const response = await api.put('/user', updatedUserData, {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    })
-    return response
-}
+    });
+    return response;
+};
+
 
 export const deleteUser = async (id) => {
-    const response = await api.get(`/user/${id}`, {
+    const response = await api.delete(`/user/${id}`, {
         headers: {
             authorization: localStorage.getItem("token"),
         },
