@@ -8,13 +8,19 @@ import { sendInvitation } from "../../../Services/sendInvitation"
 function Invitation() {
   const [email, setEmail] = useState("")
   const [emailSent, setEmailSent] = useState(false)
+  const [emptyEmail, setEmptyEmail] = useState(false)
 
   const navigate = useNavigate()
 
   async function sendInv() {
     try {
       const invitationResponse = await sendInvitation(email)
-      setEmailSent(true)
+      if (invitationResponse){
+        setEmailSent(true)
+      } if (!invitationResponse){
+        setEmptyEmail(true)
+        console.log("please enter the email")
+      }
     } catch (error) {
       console.error("Send Invitation error", error)
     }
@@ -23,7 +29,8 @@ function Invitation() {
   return (
     <>
       <div className="contatinerInvitation">
-      {emailSent && <h2 className="invSenth4">INVITATION SENT!!</h2>}
+      {emailSent && <h2 className="invSent">INVITATION SENT!!</h2>}
+      {emptyEmail && <h2 className="invSent">UPS! Don't forget the email!</h2>}
         <div className="contentInvitation">
           <div className="invitationBox">
             <div className="createFamInvitation">
@@ -38,13 +45,16 @@ function Invitation() {
                 id="emailInvitation"
                 type="email"
                 placeholder="Enter email"
-                onChange={(e) => { setEmail(e.target.value); setEmailSent(false) }}>
+                onChange={(e) => { setEmail(e.target.value); setEmailSent(false); setEmptyEmail(false)}}>
               </input>
             </div>
             <div className="buttonBox">
-              <button onClick={() => sendInv()} className="sendInvitationButton">
+              {email && <button onClick={() => sendInv()} className="sendInvitationButton">
                 <b>Send Invitation</b>
-              </button>
+              </button>}
+              {!email && <button onClick={() => sendInv()} className="emptyEmailButton">
+                <b>Send Invitation</b>
+              </button>}
             </div>
           </div>
         </div>
