@@ -11,8 +11,6 @@ import logout from "../../assets/img/logout_icon.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-
 function LeftSide() {
  
   const navigate = useNavigate()

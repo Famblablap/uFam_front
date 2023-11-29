@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/decalogue",
-        element: <Decalogue/>,
+        element: <Decalogue />,
       },
     ],
   },
@@ -76,6 +76,14 @@ const router = createBrowserRouter([
   {
     path: "/app",
     element: <Root />,
+    loader: () => {
+      if (!localStorage.getItem("token")) {
+        return redirect("/login")
+      }
+      else {
+        return null;
+      }
+    },
     children: [
       {
         path: "/app",
@@ -85,10 +93,10 @@ const router = createBrowserRouter([
         path: "/app/profile",
         element: <Profile />,
       },
-            {
-                path: "/app/profile/:id",
-                element: <FamProfile/>
-            },
+      {
+        path: "/app/profile/:id",
+        element: <FamProfile />
+      },
       {
         path: "/app/create",
         element: <Create />,
