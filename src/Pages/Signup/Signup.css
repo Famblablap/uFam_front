@@ -1,0 +1,206 @@
+.containerSignup {
+    height: 100vh;
+    width: 100vw;
+    background-color: #D2E7FB;
+}
+
+.contentSignup {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #D2E7FB;
+}
+
+.signupCard {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 594px;
+    height: 700px;
+    border: 5px solid black;
+    border-radius: 50px;
+    background-color: rgb(198, 230, 247);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.signupCard2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 594px;
+    height:550px;
+}
+
+.signupTitle {
+    color: #000000;
+    font-size: 40px;
+    height: 70px;
+}
+
+.secondTitleSignup {
+    font-size: 25px;
+    height: 50px;
+}
+
+.familyNameSignup {
+    color: black;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#familyNameSignup {
+    background-color: #D2E7FB;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.nameSurnameLabelSignup {
+    color: black;
+    font-size: 20px;
+    display: flex;
+}
+
+#nameSignup {
+    background-color: #D2E7FB;
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+#surnameSignup {
+    background-color: #D2E7FB;
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.birthdaySignup {
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#birthdaySignup {
+    background-color: #D2E7FB;
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.emailSignup {
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#emailSignup {
+    background-color: #D2E7FB;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.passwordSignup {
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#passwordSignup {
+    background-color: #D2E7FB;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.repasswordSignup {
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#repasswordSignup {
+    background-color: #D2E7FB;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.signupButtonSignup {
+    width: 105px;
+    height: 50px;
+    border-radius: 30px;
+    border: 3px solid #000000;
+    font-size: 20px;
+    color: #000000;
+    background-color: #D2E7FB;
+    transition: #FEF7D9 0.3s ease;
+    margin-top: 50px;
+}
+
+.signupButtonSignup:hover {
+    background-color: #000000;
+    color: #D2E7FB;
+}
+
+.arrowButtonSignup {
+    margin-left: 10px;
+    width: 73px;
+    height: 70px;
+    padding: 10px;
+}
+
+.arrowButtonSignup:hover {
+    background: #ffffff;
+    border-radius: 70px;
+}
+
+.kidPhoto {
+    width: 500px;
+    height: 550px;
+    border-radius: 40px;
+}
+
+.alreadyAccountSignup{
+    width: 500px;
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 5px solid #000000;
+    background: #D2E7FB;
+    color: #000000;
+    font-size: 25px;
+}
+
+.loginButtonSignup {
+    width: 105px;
+    height: 50px;
+    border-radius: 30px;
+    border: 3px solid #000000;
+    font-size: 20px;
+    color: #000000;
+    background-color: #D2E7FB;
+    transition: #FEF7D9 0.3s ease;
+}
+
+.loginButtonSignup:hover {
+    background-color: #000000;
+    color: #D2E7FB;
+}
+
+

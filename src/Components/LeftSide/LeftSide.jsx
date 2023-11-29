@@ -8,11 +8,18 @@ import notifications from "../../assets/img/notifications_icon.png";
 import decalogue from "../../assets/img/decalogue_icon.png";
 import settings from "../../assets/img/settings_icon.png";
 import logout from "../../assets/img/logout_icon.png";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-
 function LeftSide() {
+ 
+  const navigate = useNavigate()
+
+  function onLogout(){
+    localStorage.removeItem("token")
+    navigate("/")
+  }
+
   return (
     <div id="leftside">
       <h1>Ufam</h1>
@@ -26,7 +33,7 @@ function LeftSide() {
         <Link to="/app/decalogue"><div className="menu_option"><img src={decalogue} className="icon"/>Decalogue</div></Link>
         <Link to="/app/settings"><div className="menu_option"><img src={settings} className="icon"/>Settings </div></Link>
       </div>
-      <img src={logout} className="icon"/>
+      <div className="logoutButton" onClick={() => onLogout()}><img src={logout} className="icon"/></div>
     </div>
     
   )
