@@ -14,7 +14,7 @@ export const getFamProfile = async (id) => {
         headers: {
             authorization: localStorage.getItem("token"),
         },
-    });   
+    });  
     return response
 }
 
