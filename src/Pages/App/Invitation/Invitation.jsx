@@ -7,11 +7,6 @@ function Invitation() {
   return (
     <>
       <div className="contatinerInvitation">
-        <Link to="/app">
-          <div className="arrowButtonInvitation">
-            <img src={backButtonimgInvitation} />
-          </div>
-        </Link>
         <div className="contentInvitation">
           <div className="invitationBox">
             <div className="createFamInvitation">
@@ -29,7 +24,7 @@ function Invitation() {
                 </input>
             </div>
             <div className="buttonBox">
-            <Link to="/">
+            <Link to="/app/invitation">
               <button className="sendInvitationButton">
                 <b>Send Invitation</b>
               </button>

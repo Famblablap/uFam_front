@@ -61,7 +61,7 @@ function Login() {
               </div>
             </form>
           </div>
-          {errorMessage && <h4>Ups! Your creds are wrong. Try again!</h4>}
+          {errorMessage && <h4 className="creds">Ups! Your creds are wrong. Try again!</h4>}
           <button onClick={() => onLogin()} className="loginButtonLogin">
             <b>Log In</b>
           </button>
