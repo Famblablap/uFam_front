@@ -103,7 +103,7 @@ function FamProfile() {
               alt="User Avatar"
               src={userAvatar}
             />
-            <Typography variant="h6">{famProfiles.name}</Typography>
+            <Typography variant="h6">{famProfiles.name} {famProfiles.surname}</Typography>
           </Box>
 
           <Box sx={{ display: "flex", alignItems: "center" }}>

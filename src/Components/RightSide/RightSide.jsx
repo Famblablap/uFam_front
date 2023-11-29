@@ -7,7 +7,7 @@ import addFam from "../../assets/img/add_fam.png";
 
 function RigthSide() {
   const [family, setFamily] = useState([]);
-
+  console.log(family);
   useEffect(() => {
     showFamily();
   }, []);
@@ -16,10 +16,17 @@ function RigthSide() {
     const { data } = await getAllFamProfiles();
     setFamily(data);
   }
+  const familyName = Array.from(
+    new Set(
+      family
+        .filter((user) => user.family)
+        .map((user) => user.family.family_name)
+    )
+  );
   return (
     <div id="rightside">
       <Box className="familyGroup">
-        <Typography>FamilyName</Typography>
+        <Typography variant="h5">{familyName}</Typography>
         <Avatar
           sx={{ width: 80, height: 80, marginBottom: 1 }}
           className="familyIcon"
@@ -44,7 +51,7 @@ function RigthSide() {
               src={familiar.profile_picture}
             />
             <Typography variant="subtitle1" fontWeight="bold">
-              {familiar.name}
+              {familiar.name} {familiar.surname}
             </Typography>
           </Box>
         </Link>

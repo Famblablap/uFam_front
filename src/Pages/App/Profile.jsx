@@ -103,7 +103,7 @@ function Profile() {
             alt="User Avatar"
             src={userAvatar}
           />
-          <Typography variant="h6">{profile.name}</Typography>
+          <Typography variant="h6">{profile.name} {profile.surname}</Typography>
         </Box>
 
         <Link to={"/app/settings"}><Box sx={{ display: "flex", alignItems: "center" }}>

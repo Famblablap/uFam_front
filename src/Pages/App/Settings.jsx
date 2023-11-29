@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { updateUser } from "../../Services/user";
 
 // import React from "react";
