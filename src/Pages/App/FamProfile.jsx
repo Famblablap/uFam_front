@@ -14,57 +14,28 @@ import message from "../../assets/img/message_icon.png";
 import "../../Components/FeedComponents/Feed.css";
 import { useEffect, useState } from "react";
 import { getFamProfile } from "../../Services/user";
+import { getOneFamContent } from "../../Services/content";
 
-const userImages = [
-  {
-    id: 1,
-    url: "https://ethic.es/wp-content/uploads/2023/03/imagen.jpg",
-    title: "Imagen 1",
-  },
-  {
-    id: 2,
-    url: "https://png.pngtree.com/background/20230612/original/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-picture-image_3180467.jpg",
-    title: "Imagen 2",
-  },
-];
-const userVideos = [
-  {
-    id: 1,
-    url: "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701129600&semt=ais",
-    title: "Imagen 1",
-  },
-  {
-    id: 2,
-    url: "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=",
-    title: "Imagen 2",
-  },
-];
-
-const userBlog = [
-  {
-    id: 1,
-    url: "https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701129600&semt=ais",
-    title: "Imagen 1",
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VhcmNofGVufDB8fDB8fHww",
-    title: "Imagen 2",
-  },
-];
 
 function FamProfile() {
   const { id } = useParams();
   const [famProfiles, setFamProfile] = useState({});
+  const [famContent, setFamContent] = useState([])
   const [selectedOption, setSelectedOption] = useState("PHOTOS");
 
   useEffect(() => {
     showFamProfile();
+    showFamContent()
   }, [id]);
 
   async function showFamProfile() {
     const { data } = await getFamProfile(id);
     setFamProfile(data);
+  }
+
+  async function showFamContent() {
+    const { data } = await getOneFamContent(id)
+    setFamContent(data)
   }
 
   const handleOptionClick = (option) => {
@@ -74,11 +45,11 @@ function FamProfile() {
   const getImagesForSelectedOption = () => {
     switch (selectedOption) {
       case "PHOTOS":
-        return userImages;
-      case "VIDEOS":
-        return userVideos;
-      case "BLOG":
-        return userBlog;
+        return famContent;
+      // case "VIDEOS":
+      //   return userVideos;
+      // case "BLOG":
+      //   return userBlog;
       default:
         return [];
     }
@@ -118,7 +89,8 @@ function FamProfile() {
             marginTop: "15px",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: "flex", alignItems: "center" }}
+          onClick={() => handleOptionClick("PHOTOS")}>
             <img src={photos} style={{ width: 40, height: 40}}/>
             <Typography
               className="user-option"
@@ -169,8 +141,7 @@ function FamProfile() {
             {getImagesForSelectedOption().map((image) => (
               <ImageListItem key={image.id}>
                 <img
-                  src={image.url}
-                  alt={image.title}
+                  src={image.content_url}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </ImageListItem>

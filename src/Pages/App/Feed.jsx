@@ -3,7 +3,6 @@ import "../../Components/FeedComponents/Feed.css";
 import like from "../../assets/img/Like.png";
 import comment from "../../assets/img/Comment.png";
 // import userProfile from "../../assets/img/user.png"
-import image from "../../assets/img/image.png";
 import { useEffect, useState } from "react";
 import { getAllFamContent } from "../../Services/content";
 
@@ -33,7 +32,6 @@ function Feed() {
           sx={{
             display: "flex",
             alignItems: "center",
-            
             padding: 2,
             position: "absolute",
             zIndex: 1,
