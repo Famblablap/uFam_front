@@ -1,6 +1,8 @@
 import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { updateUser } from "../../Services/user";
+import { getProfile } from "..//../Services/user"
+import { useEffect } from "react";
 
 // import React from "react";
 
@@ -14,7 +16,18 @@ function Settings() {
   const [surname, setSurname] = useState("");
   const [birthdate, setBirthdate] = useState("");
   const [password, setPassword] = useState("");
+  const [profileInfo, setProfileInfo] = useState(false)
 
+  async function getInfoProfile(){
+    const {data} = await getProfile()
+    setName(data.name)
+    setSurname(data.surname)
+    setBirthdate(data.birthdate)
+    // console.log(name)
+    setProfileInfo(true)
+  }
+
+  useEffect(() => {getInfoProfile()}, [])
 
   async function updateProfile(updatedUserData) {
     const { data } = await updateUser(updatedUserData);
@@ -44,6 +57,7 @@ function Settings() {
   };
 
   return (
+    profileInfo && 
     <Box
       sx={{
         display: "flex",
@@ -104,22 +118,22 @@ function Settings() {
       >
         <Typography sx={{ marginTop: "2%", width: "80%" }}>Name:</Typography>
         <TextField
-          label="Enter your name"
           required
           id="name"
           name="name"
           sx={{ width: "80%" }}
           onChange={handleNameChange}
+          value={name}
         />
         <Typography sx={{ marginTop: "2%", width: "80%" }}>Surname:</Typography>
         <TextField
-          label="Enter your surname"
           required
           id="surname"
           name="surname"
           sx={{ width: "80%"}}
           onChange={handleSurnameChange}
-        />
+          value={surname}
+          />
         <Typography sx={{ marginTop: "2%", width: "80%" }}>
           Birthdate:
         </Typography>
@@ -130,6 +144,7 @@ function Settings() {
           id="birthdate"
           sx={{ width: "80%" }}
           onChange={handleBirthdateChange}
+          value={birthdate}
         />
         <Typography sx={{ marginTop: "2%", width: "80%" }}>
           Password:
