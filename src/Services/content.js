@@ -1,11 +1,10 @@
 import api from "./config"
 
-export const createPhoto = async (photoData) => {
+export const createContent = async (contentData) => {
   const token = localStorage.getItem("token")
-  return api.post("/photo", photoData, {
+  return api.post("/content", contentData, {
     headers: {
       authorization: token,
     },
   })
 }
-
