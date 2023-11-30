@@ -5,18 +5,30 @@ import comment from "../../assets/img/Comment.png";
 // import userProfile from "../../assets/img/user.png"
 import { useEffect, useState } from "react";
 import { getAllFamContent } from "../../Services/content";
+import likeactive from "../../assets/img/likeactive.png";
 
 function Feed() {
   const [contents, setContents] = useState([]);
+  const [likes, setLikes] = useState({});
 
   useEffect(() => {
-    showAllContent();
-  }, []);
+    showAllContent()
+  }, [])
 
   async function showAllContent() {
-    const { data } = await getAllFamContent();
-    setContents(data);
+    const { data } = await getAllFamContent()
+    setContents(data)
+    const initialLikes = data.reduce((acc, content) => {
+      acc[content.id] = false
+      return acc
+    }, {})
+    setLikes(initialLikes)
   }
+
+  const handleLikeClick = (contentId) => {
+    setLikes({ ...likes, [contentId]: !likes[contentId] })
+  }
+
   return (
     <div id="content">
       {contents.map((content) => (
@@ -41,7 +53,7 @@ function Feed() {
               borderRadius: "21px",
               height: "20px",
               marginTop: "10px",
-              marginLeft: "10px"
+              marginLeft: "10px",
             }}
           >
             <Avatar
@@ -77,23 +89,27 @@ function Feed() {
                 backgroundColor: "	rgb(255,255,255, 0.5)",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
-              <IconButton className="likeButton">
-                <img src={like} />
+              <IconButton
+                className="likeButton"
+                onClick={() => handleLikeClick(content.id)}
+              >
+                <img src={likes[content.id] ? likeactive : like} alt="Like" />
               </IconButton>
             </Box>
-            <Box 
-            sx={{
-              border: "3px solid #7209B7",
-              borderRadius: "50px",
-              backgroundColor: "	rgb(255,255,255, 0.5)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: "3px"
-            }}>
+            <Box
+              sx={{
+                border: "3px solid #7209B7",
+                borderRadius: "50px",
+                backgroundColor: "	rgb(255,255,255, 0.5)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "3px",
+              }}
+            >
               <IconButton className="commentButton">
                 <img src={comment} />
               </IconButton>
@@ -102,7 +118,7 @@ function Feed() {
         </Box>
       ))}
     </div>
-  );
+  )
 }
 
 export default Feed;
