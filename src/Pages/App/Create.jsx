@@ -1,63 +1,53 @@
-import React, { useRef, useState } from "react";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
+import { Box, IconButton, Typography } from "@mui/material";
 import AddIcon from "../../assets/Vector.png"; // Make sure the path is correct
 import axios from "axios";
-import { createPhoto } from "../../Services/content";
+import { createContent } from "../../Services/content";
 
 function Create() {
   const preset_key = "r8cu4l86"
   const cloud_name = "dehapq68a"
   const fileInputRef = useRef(null)
   const [uploadSuccess, setUploadSuccess] = useState(false)
-  const [url, setUrl] = useState("")
 
-//   async function updateContent (){
-//     const {data} = await createPhoto()
-//     console.log(data)
-//   }
-
-// const handleHola = async () => {
-//   try {
-//     const updatedUrl = { url }
-//     await updateProfile(updatedUserData)
-//   } catch (error) {
-//     console.error("Error submitting user")
-//   }
-// }
+  useEffect(() => {
+    if (uploadSuccess) {
+      console.log("Upload was successful.")
+    }
+  }, [uploadSuccess]);
 
   const handleUploadClick = () => {
     fileInputRef.current.click()
   }
 
   const handleFile = (e) => {
-    setUploadSuccess(false)
-    const file = e.target.files[0]
-    const formData = new FormData()
-    formData.append("file", file)
-    formData.append("upload_preset", preset_key)
+    setUploadSuccess(false);
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", preset_key);
 
     axios
       .post(
         `https://api.cloudinary.com/v1_1/${cloud_name}/image/upload`,
         formData
       )
-      .then((response) => {
-        const photoUrl = response.data.secure_url;
-        createPhoto({ photo_url: photoUrl })
-          .then(() => {
-            setUploadSuccess(true)
-          })
-          .catch((serverError) => {
-            console.error('Error saving photo to user profile', serverError);
-            setUploadSuccess(false)
-          })
+      .then(async (response) => {
+        const contentUrl = response.data.secure_url
+        try {
+          await createContent({ content_url: contentUrl })
+          setUploadSuccess(true)
+        } catch (error) {
+          console.error("Error saving content to user profile", error)
+          setUploadSuccess(false)
+        }
       })
-      .catch((cloudinaryError) => {
-        console.error('Error uploading to Cloudinary', cloudinaryError)
+      .catch((error) => {
+        console.error("Error uploading to Cloudinary", error);
         setUploadSuccess(false)
       })
   }
-  
+
 
   return (
     <Box
@@ -111,7 +101,7 @@ function Create() {
           <Box
             component="img"
             src={AddIcon}
-            sx={{ height: "100px", width: "100px" }} // Adjust the size as necessary
+            sx={{ height: "100px", width: "100px" }}
           />
         </IconButton>
         <Typography
@@ -132,9 +122,6 @@ function Create() {
             Content posted correctly!!
           </Typography>
         )}
-        <Button>
-          <p>hola</p>
-        </Button>
       </Box>
     </Box>
   )

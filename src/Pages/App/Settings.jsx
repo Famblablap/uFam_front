@@ -1,6 +1,7 @@
 import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { updateUser } from "../../Services/user";
+import { Link } from "react-router-dom";
 import { getProfile } from "..//../Services/user"
 import { useEffect } from "react";
 
@@ -158,7 +159,8 @@ function Settings() {
           sx={{ width: "80%"}}
           onChange={handlePasswordChange}
         />
-        <Button
+        <Link to={"/app/profile"}>
+          <Button
           sx={{
             marginTop: "10px",
             width: "120px",
@@ -176,7 +178,7 @@ function Settings() {
           onClick={handleSubmit}
         >
           <b>Submit</b>
-        </Button>
+        </Button></Link>
 
 
       </Box>
