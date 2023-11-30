@@ -6,17 +6,23 @@ import { Link } from 'react-router-dom'
 import { login } from "../../Services/auth"
 
 
+
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState(false)
+
   const navigate = useNavigate()
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      onLogin();
+    }
+  };
 
   async function onLogin() {
     try {
       const loginResponse = await login({ email, password })
-      console.log(loginResponse)
       if (loginResponse.token) {
         localStorage.setItem("token", loginResponse.token)
         localStorage.setItem("id", loginResponse.id)
@@ -41,7 +47,7 @@ function Login() {
             <div className="loginTitle">
               <p><b>Log In</b></p>
             </div>
-            <form className="formLogin">
+            <form className="formLogin" onKeyDown={handleKeyPress}>
               <div className="emailLogin">
                 <label><b>Email:</b></label><br></br>
                 <input
