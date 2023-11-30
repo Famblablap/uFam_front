@@ -5,18 +5,30 @@ import comment from "../../assets/img/Comment.png";
 // import userProfile from "../../assets/img/user.png"
 import { useEffect, useState } from "react";
 import { getAllFamContent } from "../../Services/content";
+import likeactive from "../../assets/img/likeactive.png";
 
 function Feed() {
   const [contents, setContents] = useState([]);
+  const [likes, setLikes] = useState({});
 
   useEffect(() => {
-    showAllContent();
-  }, []);
+    showAllContent()
+  }, [])
 
   async function showAllContent() {
-    const { data } = await getAllFamContent();
-    setContents(data);
+    const { data } = await getAllFamContent()
+    setContents(data)
+    const initialLikes = data.reduce((acc, content) => {
+      acc[content.id] = false
+      return acc
+    }, {})
+    setLikes(initialLikes)
   }
+
+  const handleLikeClick = (contentId) => {
+    setLikes({ ...likes, [contentId]: !likes[contentId] })
+  }
+
   return (
     <div id="content">
       {contents.map((content) => (
@@ -99,8 +111,11 @@ function Feed() {
                 alignItems: "center",
               }}
             >
-              <IconButton className="likeButton">
-                <img src={like} />
+              <IconButton
+                className="likeButton"
+                onClick={() => handleLikeClick(content.id)}
+              >
+                <img src={likes[content.id] ? likeactive : like} alt="Like" />
               </IconButton>
             </Box>
             <Box
@@ -123,7 +138,7 @@ function Feed() {
         </Box>
       ))}
     </div>
-  );
+  )
 }
 
 export default Feed;

@@ -56,7 +56,7 @@ function RigthSide() {
         </Link>
       ))}
       <Link to="/app/invitation">
-      <Box 
+        <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -64,16 +64,32 @@ function RigthSide() {
             width: "250px",
             "&:hover": {
               cursor: "pointer",
-            }
+              borderRadius: "50px",
+              boxShadow: "10px 10px 28px -7px rgba(114, 9, 183,0.75)",
+              // backgroundColor: "#7209B7",
+              // border: "1px solid white",
+              // borderRadius: "21px"
+            },
           }}
         >
-          <Avatar src= {addFam}
+          <Avatar
+            src={addFam}
             style={{ width: 40, height: 40, marginRight: 15 }}
           />
-          <Typography variant="subtitle1" fontWeight="bold" sx={{color: "#7209B7"}}>
-            Add familiar
+          <Typography
+            variant="subtitle1"
+            fontWeight="bold"
+            sx={{
+              color: "#7209B7",
+              // "&:hover": {
+              //   color: "white",
+              // },
+            }}
+          >
+            Add relative
           </Typography>
-        </Box></Link> 
+        </Box>
+      </Link>
     </div>
   );
 }
