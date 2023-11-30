@@ -92,6 +92,7 @@
     justify-content: center;
 }
  .invSent{
+    color: #ed1f29;
     display: flex;
     justify-content: center;
     flex-direction: column;

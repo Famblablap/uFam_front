@@ -17,6 +17,7 @@ function LeftSide() {
 
   function onLogout(){
     localStorage.removeItem("token")
+    localStorage.removeItem("id")
     navigate("/")
   }
 

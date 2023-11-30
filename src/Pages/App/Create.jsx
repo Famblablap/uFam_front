@@ -56,7 +56,7 @@ function Create() {
         position: "relative",
         height: "100vh",
         width: "100%",
-        backgroundColor: "#A77AE4",
+        backgroundColor: "rgba(114, 9, 183, 0.2 )",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -87,7 +87,7 @@ function Create() {
             textAlign: "center",
             color: "#A77AE4",
             fontWeight: "bold",
-            mb: 2,
+            mb: 4,
           }}
         >
           CREATE NEW POST
@@ -106,7 +106,7 @@ function Create() {
         </IconButton>
         <Typography
           variant="h6"
-          sx={{ textAlign: "center", color: "#A77AE4", mt: 0 }}
+          sx={{ textAlign: "center", color: "#A77AE4", mt: 4 }}
         >
           SELECT AN IMAGE/VIDEO
         </Typography>
@@ -118,7 +118,7 @@ function Create() {
           onChange={handleFile}
         />
         {uploadSuccess && (
-          <Typography variant="subtitle1" sx={{ color: "#599596", mt: 2, fontWeight: "bold" }}>
+          <Typography variant="subtitle1" sx={{ color: "#6ad877", mt: 2, fontWeight: "bold" }}>
             Content posted correctly!!
           </Typography>
         )}

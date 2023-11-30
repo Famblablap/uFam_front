@@ -6,20 +6,20 @@ import { Link } from 'react-router-dom'
 import { login } from "../../Services/auth"
 
 
-
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState(false)
-
   const navigate = useNavigate()
+
 
   async function onLogin() {
     try {
       const loginResponse = await login({ email, password })
+      console.log(loginResponse)
       if (loginResponse.token) {
         localStorage.setItem("token", loginResponse.token)
-
+        localStorage.setItem("id", loginResponse.id)
         navigate("/app")
       } 
     } catch (error) {
