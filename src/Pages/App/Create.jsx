@@ -118,7 +118,7 @@ function Create() {
           onChange={handleFile}
         />
         {uploadSuccess && (
-          <Typography variant="subtitle1" sx={{ color: "#599596", mt: 2, fontWeight: "bold" }}>
+          <Typography variant="subtitle1" sx={{ color: "#6ad877", mt: 2, fontWeight: "bold" }}>
             Content posted correctly!!
           </Typography>
         )}
