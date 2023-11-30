@@ -16,7 +16,6 @@ function Login() {
   async function onLogin() {
     try {
       const loginResponse = await login({ email, password })
-      console.log(loginResponse)
       if (loginResponse.token) {
         localStorage.setItem("token", loginResponse.token)
         localStorage.setItem("id", loginResponse.id)
