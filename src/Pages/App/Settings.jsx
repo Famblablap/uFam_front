@@ -179,8 +179,6 @@ function Settings() {
         >
           <b>Submit</b>
         </Button></Link>
-
-
       </Box>
     </Box>
   );

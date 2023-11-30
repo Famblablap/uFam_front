@@ -5,6 +5,7 @@ import backButtonimgSignup from "../../assets/img/back_sign_up.png"
 import kidPhoto from "../../assets/img/little-girl-uses-laptop-while-sitting-room-with-neon-lighting.jpg"
 import { Link } from "react-router-dom"
 import { signup } from "../../Services/auth"
+import { Flag } from "@mui/icons-material"
 
 
 function Signup() {
@@ -15,25 +16,49 @@ function Signup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [repeatPassword, setRepeatPassword] = useState("")
+  const [errorMessage, setErrorMessage] = useState(false)
 
   const navigate = useNavigate()
 
-  async function onSignUp(){
-    try{
-      const signUpResponse = await signup ({
-        family_name,
-        name,
-        surname,
-        birthday,
-        email,
-        password,
-        repeatPassword
-      })
-      if (signUpResponse) {
-        navigate("/login")
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      onSignUp();
+      console.log("PRESS")
+    }
+  };
+
+  function checkInfo(){
+   if (
+    family_name.length === 0 || 
+    name.length === 0 || 
+    surname.length === 0 || 
+    birthday === 0 || 
+    email.length === 0 ||
+    password.length === 0 ||
+    repeatPassword === 0){
+    setErrorMessage(true)
+    return false
+   } return true
+  }
+  async function onSignUp() {
+    if (checkInfo()) {
+      try {
+        const signUpResponse = await signup({
+          family_name,
+          name,
+          surname,
+          birthday,
+          email,
+          password,
+          repeatPassword
+        })
+        if (signUpResponse) {
+          navigate("/login")
+        }
+      } catch (error) {
+        
+        console.error("Profile incomplete", error)
       }
-    } catch (error) {
-      console.error("Profile incomplete", error)
     }
   }
 
@@ -45,8 +70,8 @@ function Signup() {
             <img src={backButtonimgSignup} />
           </div>
         </Link>
-        <div className="contentSignup">
-          <div className="signupCard">
+        <div className="contentSignup" onKeyDown={handleKeyPress}>
+          <div className="signupCard" >
             <div className="signupTitle">
               <p><b>Sign Up</b></p>
             </div>
@@ -72,13 +97,13 @@ function Signup() {
                   id="nameSignup"
                   type="text"
                   placeholder="Enter your name"
-                  onChange={(e) => setName(e.target.value)}>
+                  onChange={(e) => { setName(e.target.value); setErrorMessage(false) }}>
                 </input>
                 <input
                   id="surnameSignup"
                   type="text"
                   placeholder="Enter your surname"
-                  onChange={(e) => setSurname(e.target.value)}>
+                  onChange={(e) => { setSurname(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
               <div className="birthdaySignup">
@@ -86,7 +111,7 @@ function Signup() {
                 <input
                   id="birthdaySignup"
                   type="date"
-                  onChange={(e) => setBirthday(e.target.value)}>
+                  onChange={(e) => { setBirthday(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
               <div className="emailSignup">
@@ -95,7 +120,7 @@ function Signup() {
                   id="emailSignup"
                   type="email"
                   placeholder="Enter your email"
-                  onChange={(e) => setEmail(e.target.value)}>
+                  onChange={(e) => { setEmail(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
               <div className="passwordSignup">
@@ -104,7 +129,7 @@ function Signup() {
                   id="passwordSignup"
                   type="password"
                   placeholder="Enter your password"
-                  onChange={(e) => setPassword(e.target.value)}>
+                  onChange={(e) => { setPassword(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
               <div className="repasswordSignup">
@@ -113,13 +138,14 @@ function Signup() {
                   id="repasswordSignup"
                   type="password"
                   placeholder="Repeat your email"
-                  onChange={(e) => setRepeatPassword(e.target.value)}>
+                  onChange={(e) => { setRepeatPassword(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
             </form>
-              <button onClick={() => onSignUp()}className="signupButtonSignup">
-                <b>Sign Up</b>
-              </button>
+            {errorMessage && <h4 className="creds">Profile incomplete!</h4>}
+            <button onClick={() => onSignUp()} className="signupButtonSignup">
+              <b>Sign Up</b>
+            </button>
           </div>
           <div className="signupCard2">
             <img className="kidPhoto" src={kidPhoto} />
@@ -132,9 +158,7 @@ function Signup() {
               </Link>
             </div>
           </div>
-
         </div>
-
       </div>
     </>
   )

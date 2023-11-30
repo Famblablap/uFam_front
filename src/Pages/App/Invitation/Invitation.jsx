@@ -12,6 +12,12 @@ function Invitation() {
 
   const navigate = useNavigate()
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      sendInv();
+    }
+  };
+
   async function sendInv() {
     try {
       const invitationResponse = await sendInvitation(email)
@@ -32,7 +38,7 @@ function Invitation() {
       {emailSent && <h2 className="invSent">INVITATION SENT!!</h2>}
       {emptyEmail && <h2 className="invSent">UPS! Don't forget the email!</h2>}
         <div className="contentInvitation">
-          <div className="invitationBox">
+          <div className="invitationBox" onKeyDown={handleKeyPress}>
             <div className="createFamInvitation">
               <p><b>Create an Invitation</b></p>
             </div>

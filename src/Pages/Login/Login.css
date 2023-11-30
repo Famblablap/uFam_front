@@ -1,7 +1,7 @@
 .containerLogin {
     height: 100vh;
     width: 100vw;
-    background-color: #FFAF6F;
+    background-color: #ff97cb;
 }
 
 .loginCard {
@@ -15,7 +15,7 @@
     height: 500px;
     border: 5px solid #A05F33;
     border-radius: 50px;
-    background: #FEF7D9;
+    background: #ffd2e8;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -36,7 +36,7 @@
     margin-top: 10px;
     border-radius: 10px;
     border: 5px solid #A05F33;
-    background: #FEF7D9;
+    background: #ffd2e8;
     color: #A05F33;
     font-size: 25px;
 }
@@ -53,7 +53,7 @@
 }
 
 .singUpBottonLogin:hover { 
-    background-color: #A05F33;
+    background-color: #ff97cb;
     color: #FEF7D9;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .loginButtonLogin:hover {
-    background-color: #A05F33;
+    background-color: #ff97cb;
     color: #FEF7D9;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .arrowButtonLogin:hover {
-    background: #FEF7D9;
+    background: #ffd2e8;
     border-radius: 70px;
 }
 
