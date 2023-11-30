@@ -56,29 +56,25 @@ function RigthSide() {
           </Box>
         </Link>
       ))}
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          padding: 0.5,
-          width: "250px",
-          "&:hover": {
-            cursor: "pointer",
-          },
-        }}
-      >
-        <Avatar
-          src={addFam}
-          style={{ width: 40, height: 40, marginRight: 2 }}
-        />
-        <Typography
-          variant="subtitle1"
-          fontWeight="bold"
-          sx={{ color: "#7209B7" }}
+      <Link to="/app/invitation">
+      <Box 
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            padding: 0.5,
+            width: "250px",
+            "&:hover": {
+              cursor: "pointer",
+            }
+          }}
         >
-          Add familiar
-        </Typography>
-      </Box>
+          <Avatar src= {addFam}
+            style={{ width: 40, height: 40, marginRight: 15 }}
+          />
+          <Typography variant="subtitle1" fontWeight="bold" sx={{color: "#7209B7"}}>
+            Add familiar
+          </Typography>
+        </Box></Link> 
     </div>
   );
 }
