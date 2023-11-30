@@ -4,11 +4,25 @@ import like from "../../assets/img/Like.png";
 import comment from "../../assets/img/Comment.png";
 // import userProfile from "../../assets/img/user.png"
 import image from "../../assets/img/image.png";
+import { useEffect, useState } from "react";
+import { getAllFamContent } from "../../Services/content";
 
 function Feed() {
+  const [contents, setContents] = useState([])
+  console.log(contents)
+
+  useEffect(() => {
+    showAllContent()
+  }, [])
+
+  async function showAllContent() {
+    const { data } = await getAllFamContent()
+    setContents(data)
+  }
   return (
     <div id="content">
-      <Box
+      {contents.map((content)=> (
+      <Box key={content.id}
         sx={{
           maxWidth: 800,
           width: "100%",
@@ -28,14 +42,14 @@ function Feed() {
           <Avatar
             sx={{ width: 40, height: 40, marginRight: 2 }}
             alt="User Avatar"
-            src="https://placekitten.com/200/200"
           />
           <Typography variant="subtitle1" fontWeight="bold">
-            username
+            {content.user.name} {content.user.surname}
           </Typography>
         </Box>
+        <Box sx={{width: "100%", height:"80vh"}}>
         <img
-          src={image}
+          src={content.content_url}
           alt="Post"
           style={{ width: "100%", objectFit: "cover" }}
           className="imagePost"
@@ -50,8 +64,9 @@ function Feed() {
             left: 0,
           }}
         >
-          <span style={{ fontWeight: "bold" }}>username</span> text
+          <span style={{ fontWeight: "bold" }}>{content.user.name} {content.user.surname}</span>
         </Typography>
+        </Box>
         <Box
           sx={{
             display: "flex",
@@ -68,7 +83,7 @@ function Feed() {
             <img src={comment} />
           </IconButton>
         </Box>
-      </Box>
+      </Box>))}
     </div>
   );
 }

@@ -5,7 +5,6 @@ import { getAllFamMessages } from "../../Services/messages";
 
 function Messages() {
   const [messages, setMessages] = useState([]);
-  console.log(messages);
 
   useEffect(() => {
     showMessages();
@@ -14,7 +13,6 @@ function Messages() {
   async function showMessages() {
     const { data } = await getAllFamMessages();
     setMessages(data);
-    console.log(data);
   }
 
   return (

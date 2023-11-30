@@ -19,6 +19,7 @@ function Login() {
       const loginResponse = await login({ email, password })
       if (loginResponse.token) {
         localStorage.setItem("token", loginResponse.token)
+
         navigate("/app")
       } 
     } catch (error) {

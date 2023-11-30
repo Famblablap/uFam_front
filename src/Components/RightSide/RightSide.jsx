@@ -7,7 +7,6 @@ import addFam from "../../assets/img/add_fam.png";
 
 function RigthSide() {
   const [family, setFamily] = useState([]);
-  console.log(family);
   useEffect(() => {
     showFamily();
   }, []);
