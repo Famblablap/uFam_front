@@ -8,7 +8,7 @@ import { signup } from "../../Services/auth"
 
 
 function Signup() {
-  const [familyName, setFamilyName] = useState("")
+  const [family_name, setFamilyName] = useState("")
   const [name, setName] = useState("")
   const [surname, setSurname] = useState("")
   const [birthday, setBirthday] = useState("")
@@ -21,7 +21,7 @@ function Signup() {
   async function onSignUp(){
     try{
       const signUpResponse = await signup ({
-        familyName,
+        family_name,
         name,
         surname,
         birthday,
