@@ -97,10 +97,10 @@ function FamProfile() {
               fontWeight="bold"
               sx={{ marginLeft: "5px", color: "rgba(114, 9, 183)" }}
             >
-              PHOTOS
+              CONTENT
             </Typography>
           </Box>
-          <Box
+          {/* <Box
             sx={{ display: "flex", alignItems: "center" }}
             onClick={() => handleOptionClick("VIDEOS")}
           >
@@ -112,7 +112,7 @@ function FamProfile() {
             >
               VIDEOS
             </Typography>
-          </Box>
+          </Box> */}
           <Box
             sx={{ display: "flex", alignItems: "center" }}
             onClick={() => handleOptionClick("BLOG")}
