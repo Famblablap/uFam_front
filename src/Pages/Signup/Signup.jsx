@@ -10,7 +10,6 @@ import { Flag } from "@mui/icons-material"
 
 function Signup() {
   const [family_name, setFamilyName] = useState("")
-  const [family_name, setFamilyName] = useState("")
   const [name, setName] = useState("")
   const [surname, setSurname] = useState("")
   const [birthday, setBirthday] = useState("")
