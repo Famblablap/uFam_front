@@ -44,7 +44,6 @@ function Login() {
               <img src={arrowButtonLogin} />
             </Link>
           </div>
-  
           <NavLink to="/">
             <img
               src="src/assets/img/u__1_-removebg-preview.png"

@@ -164,10 +164,14 @@
 }
 
 .arrowButtonSignup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-left: 10px;
     width: 73px;
     height: 70px;
     padding: 10px;
+    margin-right: 41%;
 }
 
 .arrowButtonSignup:hover {
@@ -212,4 +216,8 @@
     color: #D2E7FB;
 }
 
+.arrowLogoSignup {
+    display: flex;
+    flex-direction: row;
+}
 
