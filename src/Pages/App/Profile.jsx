@@ -6,7 +6,6 @@ import {
   ImageListItem,
 } from "@mui/material";
 
-import userAvatar from "../../assets/img/user.png";
 import photos from "../../assets/img/photo_profile_icon.png";
 // import videos from "../../assets/img/videos_profile_icon.png";
 import blog from "../../assets/img/blog_profile_icon.png";
