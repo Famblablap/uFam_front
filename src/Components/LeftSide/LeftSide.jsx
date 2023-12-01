@@ -25,14 +25,14 @@ function LeftSide() {
     <div id="leftside">
       <h1>Ufam</h1>
       <div id="menu">
-        <Link to="/app"><div className="menu_option"><img src={home} className="icon"/>Home</div></Link>
-        <Link to="/app/profile"><div className="menu_option"><img src={profile} className="icon"/>Profile</div></Link>
-        <Link to="/app/create"><div className="menu_option"><img src={create} className="icon"/>Create</div></Link>
-        <Link to="/app/invitation"><div className="menu_option"><img src={family_email} className="icon"/>Family Email</div></Link>
-        <Link to="/app/messages"><div className="menu_option"><img src={message} className="icon"/>Messages</div></Link>
-        <Link to="/app/notifications"><div className="menu_option"><img src={notifications} className="icon"/>Notifications</div></Link>
-        <Link to="/app/decalogue"><div className="menu_option"><img src={decalogue} className="icon"/>Decalogue</div></Link>
-        <Link to="/app/settings"><div className="menu_option"><img src={settings} className="icon"/>Settings </div></Link>
+        <Link to="/app"><div className="menu_option"><img src={home} className="icon"/><b style={{fontSize: "20px"}}>Home</b></div></Link>
+        <Link to="/app/profile"><div className="menu_option"><img src={profile} className="icon"/><b style={{fontSize: "20px"}}>Profile</b></div></Link>
+        <Link to="/app/create"><div className="menu_option"><img src={create} className="icon"/><b style={{fontSize: "20px"}}>Create</b></div></Link>
+        <Link to="/app/invitation"><div className="menu_option"><img src={family_email} className="icon"/><b style={{fontSize: "20px"}}>Family Email</b></div></Link>
+        <Link to="/app/messages"><div className="menu_option"><img src={message} className="icon"/><b style={{fontSize: "20px"}}>Messages</b></div></Link>
+        <Link to="/app/notifications"><div className="menu_option"><img src={notifications} className="icon"/><b style={{fontSize: "20px"}}>Notifications</b></div></Link>
+        <Link to="/app/decalogue"><div className="menu_option"><img src={decalogue} className="icon"/><b style={{fontSize: "20px"}}>Decalogue</b></div></Link>
+        <Link to="/app/settings"><div className="menu_option"><img src={settings} className="icon"/><b style={{fontSize: "20px"}}>Settings</b></div></Link>
       </div>
       <div className="logoutButton" onClick={() => onLogout()}><img src={logout} className="icon"/></div>
     </div>
