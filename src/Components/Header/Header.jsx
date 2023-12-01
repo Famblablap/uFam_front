@@ -134,7 +134,7 @@ function Header() {
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "4px 16px",
-                  borderRadius: "20px",
+                  borderRadius: "30px",
                   border: "2px solid",
                   borderColor: "white",
                   backgroundColor: "transparent",
@@ -149,7 +149,7 @@ function Header() {
                   },
                 }}
               >
-                CREATE FAMILY
+                <p style={{fontSize: "15px"}}>CREATE FAMILY</p>
               </IconButton>
             </Tooltip>
           </Box>
