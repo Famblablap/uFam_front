@@ -4,6 +4,7 @@ import "../Login/Login.css"
 import arrowButtonLogin from "../../assets/img/back_login.png"
 import { Link } from 'react-router-dom'
 import { login } from "../../Services/auth"
+import { NavLink } from "react-router-dom";
 
 
 
@@ -37,11 +38,21 @@ function Login() {
   return (
     <>
       <div className="containerLogin">
-        <Link to="/">
-            <div className="arrowButtonLogin">
+        <div className="arrowLogoLogin">
+          <div className="arrowButtonLogin">
+            <Link to="/">
               <img src={arrowButtonLogin} />
-            </div>
-        </Link>
+            </Link>
+          </div>
+  
+          <NavLink to="/">
+            <img
+              src="src/assets/img/u__1_-removebg-preview.png"
+              atl="uFam_logo"
+              style={{ width: "150px", height: "150px", borderRadius: "10px" }}
+            />
+          </NavLink>
+        </div>
         <div className="loginCard">
           <div>
             <div className="loginTitle">

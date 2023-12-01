@@ -115,6 +115,7 @@
     width: 73px;
     height: 70px;
     padding: 10px;
+    margin-right: 41%;
 }
 
 .arrowButtonLogin:hover {
@@ -135,7 +136,8 @@
     color: #ed1f29;
 }
 
-.linkArrowButtonLogin {
-    width: 100px;
-    height: 100px;
+.arrowLogoLogin{
+    display: flex;
+    flex-direction: row;
+
 }
