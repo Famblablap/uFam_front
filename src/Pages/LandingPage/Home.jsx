@@ -17,18 +17,18 @@ function Home() {
   const cards = [
     {
       id: 1,
-      heading: "Protect",
-      text: "Discover essential strategies to safeguard your family’s personal information on the internet, ensuring privacy and security in the digital realm.",
+      heading: <p style={{fontSize: "40px"}}>Protect</p>,
+      text: <p style={{fontSize: "15px"}}>"Discover essential strategies to safeguard your family’s personal information on the internet, ensuring privacy and security in the digital realm."</p>,
     },
     {
       id: 2,
-      heading: "Balance",
-      text: "Explore effective ways to balance screen time with quality family moments, ensuring a healthy digital lifestyle for you and your loved ones.",
+      heading: <p style={{fontSize: "40px"}}>Balance</p>,
+      text: <p style={{fontSize: "15px"}}>"Explore effective ways to balance screen time with quality family moments, ensuring a healthy digital lifestyle for you and your loved ones."</p>
     },
     {
       id: 3,
-      heading: "Footprints",
-      text: "An insightful piece on educating children about the concept of digital footprints, emphasizing the long-term impact of their online activities.",
+      heading: <p style={{fontSize: "40px"}}>Footprint</p>,
+      text: <p style={{fontSize: "15px"}}>"An insightful piece on educating children about the concept of digital footprints, emphasizing the long-term impact of their online activities."</p>
     },
   ];
 
@@ -80,8 +80,8 @@ function Home() {
                 textAlign: "left",
               }}
             >
-              <h2>Welcome to uFam! 🏡✨</h2>
-              <p>
+              <h1 style={{fontSize: "30px"}}>Welcome to uFam! 🏡✨</h1>
+              <p style={{fontSize: "15px"}}>
                 Join us in creating treasured moments and <br></br>nurturing
                 digital wellness for every family member.
                 <br />
@@ -97,6 +97,7 @@ function Home() {
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "4px 16px",
+                  height: "45px",
                   borderRadius: "20px",
                   border: "2px solid",
                   borderColor: "white",
@@ -112,7 +113,7 @@ function Home() {
                   },
                 }}
               >
-                Log In
+                <p style={{fontSize: "20px"}}>Log In</p>
               </IconButton>
             </Typography>
           </Box>
@@ -147,13 +148,14 @@ function Home() {
               gutterBottom
               fontWeight={"bold"}
             >
-              This is uFam!
+              <h1 style={{fontSize: "30px"}}>This is uFam!</h1>
             </Typography>
             <Typography variant="body1">
+            <p style={{fontSize: "15px"}}>
               Empower your little ones with the tools to flourish in the online
               world, embracing technology with wisdom and joy 🌐👨‍👩‍👧‍👦 <br /> <br />
               Start your family's adventure today and craft a legacy of happy
-              and healthy digital memories. 💌🚀
+              and healthy digital memories. 💌🚀</p>
             </Typography>
           </Box>
           <Box
@@ -221,7 +223,7 @@ function Home() {
                   sx={{ justifyContent: "center", paddingBottom: 2 }}
                 >
                   <NavLink to="/support" style={{ textDecoration: "none" }}>
-                    <Button size="small" sx={{ color: "white" }}>
+                    <Button size="small" sx={{ color: "white", fontSize: "15px" }}>
                       Visit article here
                     </Button>
                   </NavLink>
