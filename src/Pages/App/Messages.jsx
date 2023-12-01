@@ -1,5 +1,5 @@
 import { Avatar, Box, Typography } from "@mui/material";
-import userAvatar from "../../assets/img/user.png";
+// import userAvatar from "../../assets/img/user.png";
 import { useEffect, useState } from "react";
 import { getAllFamMessages } from "../../Services/messages";
 
@@ -38,7 +38,7 @@ function Messages() {
               <Avatar
                 sx={{ width: 60, height: 60, marginRight: 2 }}
                 alt="User Avatar"
-                src={userAvatar}
+                src={message.user.profile_picture}
               />
               <Box>
                 <Typography variant="h6" fontWeight="bold">
