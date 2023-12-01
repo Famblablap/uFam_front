@@ -57,8 +57,8 @@ function Home() {
               src={welcomeimage}
               alt="Family"
               style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
+                maxWidth: "90%",
+                maxHeight: "90%",
                 width: "auto",
                 height: "auto",
                 objectFit: "contain",
@@ -138,7 +138,7 @@ function Home() {
               borderColor: "white",
               color: "white",
               p: 3,
-              m: 2,
+              m: 5,
               textAlign: "left",
             }}
           >

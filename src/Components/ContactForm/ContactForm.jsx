@@ -89,7 +89,7 @@ function ContactForm() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
+        "& .MuiTextField-root": { m: 1, width: "80ch" },
       }}
     >
       <Typography variant="h4" gutterBottom fontWeight={"bold"}>
