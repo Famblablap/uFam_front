@@ -95,10 +95,10 @@ function Profile() {
             fontWeight="bold"
             sx={{ marginLeft: "5px", color: "rgba(114, 9, 183)" }}
           >
-            PHOTOS
+            CONTENT
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("VIDEOS")}>
+        {/* <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("VIDEOS")}>
           <img src={videos} style={{ width: 40, height: 40}}/>
           <Typography
             className="user-option"
@@ -107,7 +107,7 @@ function Profile() {
           >
             VIDEOS
           </Typography>
-        </Box>
+        </Box> */}
         <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("BLOG")}>
           <img src={blog} style={{ width: 40, height: 40}}/>
           <Typography
