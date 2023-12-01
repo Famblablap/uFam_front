@@ -8,7 +8,7 @@ import {
 
 import userAvatar from "../../assets/img/user.png";
 import photos from "../../assets/img/photo_profile_icon.png";
-import videos from "../../assets/img/videos_profile_icon.png";
+// import videos from "../../assets/img/videos_profile_icon.png";
 import blog from "../../assets/img/blog_profile_icon.png";
 import settings from "../../assets/img/settings_icon.png";
 import "../../Components/FeedComponents/Feed.css";
@@ -17,29 +17,28 @@ import { getProfile } from "../../Services/user";
 import { Link } from "react-router-dom";
 import { getMyContent } from "../../Services/content";
 
-
 function Profile() {
   const [profile, setProfile] = useState({});
-  const [myContent, setMyContent] = useState([])
+  const [myContent, setMyContent] = useState([]);
   const [selectedOption, setSelectedOption] = useState("PHOTOS");
 
   useEffect(() => {
     showProfile();
-    showMyContent()
+    showMyContent();
   }, []);
 
   async function showProfile() {
-    const {data} = await getProfile();
+    const { data } = await getProfile();
     setProfile(data);
   }
 
   async function showMyContent() {
-    const { data } = await getMyContent()
-    setMyContent(data)
+    const { data } = await getMyContent();
+    setMyContent(data);
   }
 
   const handleOptionClick = (option) => {
-   setSelectedOption(option);
+    setSelectedOption(option);
   };
 
   const getImagesForSelectedOption = () => {
@@ -73,12 +72,16 @@ function Profile() {
             alt="User Avatar"
             src={userAvatar}
           />
-          <Typography variant="h6">{profile.name} {profile.surname}</Typography>
+          <Typography variant="h6">
+            {profile.name} {profile.surname}
+          </Typography>
         </Box>
 
-        <Link to={"/app/settings"}><Box sx={{ display: "flex", alignItems: "center" }}>
-          <img src={settings} style={{ width: 40, height: 40}}/>
-        </Box></Link>
+        <Link to={"/app/settings"}>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <img src={settings} style={{ width: 40, height: 40 }} />
+          </Box>
+        </Link>
       </Box>
       <Box
         sx={{
@@ -88,8 +91,11 @@ function Profile() {
           marginTop: "15px",
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("PHOTOS")}>
-          <img src={photos} style={{ width: 40, height: 40}}/>
+        <Box
+          sx={{ display: "flex", alignItems: "center" }}
+          onClick={() => handleOptionClick("PHOTOS")}
+        >
+          <img src={photos} style={{ width: 40, height: 40 }} />
           <Typography
             className="user-option"
             fontWeight="bold"
@@ -108,8 +114,11 @@ function Profile() {
             VIDEOS
           </Typography>
         </Box> */}
-        <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("BLOG")}>
-          <img src={blog} style={{ width: 40, height: 40}}/>
+        <Box
+          sx={{ display: "flex", alignItems: "center" }}
+          onClick={() => handleOptionClick("BLOG")}
+        >
+          <img src={blog} style={{ width: 40, height: 40 }} />
           <Typography
             className="user-option"
             fontWeight="bold"
@@ -119,26 +128,44 @@ function Profile() {
           </Typography>
         </Box>
       </Box>
-      <Box
-        sx={{
-          marginTop: "15px",
-          display: "flex",
-          alignItems: "center",
-          backgroundColor: "rgba(114, 9, 183, 0.2 )",
-          borderRadius: "21px",
-          padding: "17px",
-        }}
-      >
-        <ImageList cols={3} rowHeight={200} gap={8}>
-        {getImagesForSelectedOption().map((image) => (
-            <ImageListItem key={image.id}>
-              <img
-                src={image.content_url}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </ImageListItem>))}
-        </ImageList>
-      </Box>
+      {getImagesForSelectedOption().length > 0 ? (
+        <Box
+          sx={{
+            marginTop: "15px",
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "rgba(114, 9, 183, 0.2 )",
+            borderRadius: "21px",
+            padding: "17px",
+          }}
+        >
+          <ImageList cols={3} rowHeight={200} gap={8}>
+            {getImagesForSelectedOption().map((image) => (
+              <ImageListItem key={image.id}>
+                <img
+                  src={image.content_url}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            marginTop: "15px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(114, 9, 183, 0.2 )",
+            borderRadius: "21px",
+            padding: "17px",
+            height: "60vh",
+          }}
+        >
+          <Typography variant="h6">No content available</Typography>
+        </Box>
+      )}
     </Box>
   );
 }

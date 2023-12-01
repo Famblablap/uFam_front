@@ -140,7 +140,7 @@ function Feed() {
       ) : (
         <Box
           sx={{
-            marginTop: "15%",
+            marginTop: "10%",
             maxWidth: 800,
             width: "100%",
             position: "relative",
