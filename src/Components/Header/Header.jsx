@@ -51,7 +51,7 @@ function Header() {
               fontSize: "2.5rem",
               letterSpacing: ".3rem",
               color: "inherit",
-              textDecoration: "none",
+              textDecoration: "none"
             }}
           >
             uFam
