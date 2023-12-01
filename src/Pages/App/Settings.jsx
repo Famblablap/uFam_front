@@ -74,7 +74,7 @@ function Settings() {
     >
       <Box sx={{ textAlign: "start", width: "100%" }}>
         <Typography
-          sx={{ marginLeft: "5%", marginBottom: "5%" }}
+          sx={{ marginLeft: "5%", marginBottom: "5%", fontSize: "35px"}}
           fontWeight="bold"
         >
           EDIT PROFILE:
@@ -86,12 +86,12 @@ function Settings() {
           flexDirection: "column",
           width: "80%",
           height: "15%",
-          border: "1px solid black",
+          border: "3px solid black",
           borderRadius: "21px",
-          backgroundColor: "rgba(114, 9, 183, 0.35)",
+          backgroundColor: "#d3b4ef",
         }}
       >
-        <Typography variant="subtitle2" fontWeight="bold" margin={"2.5%"}>
+        <Typography variant="subtitle2" fontWeight="bold" margin={"2.5%"} style={{fontSize: "16px"}}>
           Choose your profile photo:
         </Typography>
         <Box
@@ -117,7 +117,7 @@ function Settings() {
           width: "100%",
         }}
       >
-        <Typography sx={{ marginTop: "2%", width: "80%" }}>Name:</Typography>
+        <Typography sx={{ marginTop: "2%", width: "80%", fontSize: "16px" }}>Name:</Typography>
         <TextField
           required
           id="name"
@@ -126,7 +126,7 @@ function Settings() {
           onChange={handleNameChange}
           value={name}
         />
-        <Typography sx={{ marginTop: "2%", width: "80%" }}>Surname:</Typography>
+        <Typography sx={{ marginTop: "2%", width: "80%", fontSize: "16px" }}>Surname:</Typography>
         <TextField
           required
           id="surname"
@@ -135,7 +135,7 @@ function Settings() {
           onChange={handleSurnameChange}
           value={surname}
           />
-        <Typography sx={{ marginTop: "2%", width: "80%" }}>
+        <Typography sx={{ marginTop: "2%", width: "80%", fontSize: "16px" }}>
           Birthdate:
         </Typography>
         <TextField
@@ -147,7 +147,7 @@ function Settings() {
           onChange={handleBirthdateChange}
           value={birthdate}
         />
-        <Typography sx={{ marginTop: "2%", width: "80%" }}>
+        <Typography sx={{ marginTop: "2%", width: "80%", fontSize: "16px" }}>
           Password:
         </Typography>
         <TextField
@@ -156,19 +156,19 @@ function Settings() {
           name="password"
           type="password"
           id="password"
-          sx={{ width: "80%"}}
+          sx={{ width: "80%" }}
           onChange={handlePasswordChange}
         />
         <Link to={"/app/profile"}>
           <Button
           sx={{
-            marginTop: "10px",
+            marginTop: "25px",
             width: "120px",
             height: "40px",
             border: "3px solid black",
             borderRadius: "30px",
             color: "black",
-            backgroundColor: "rgba(114, 9, 183, 0.35)",
+            backgroundColor: "#d3b4ef",
             "&:hover": {
               backgroundColor: "white",
               color: "#7209B7",
@@ -177,7 +177,7 @@ function Settings() {
           }}
           onClick={handleSubmit}
         >
-          <b>Submit</b>
+          <b style={{fontSize: "15px"}}>Submit</b>
         </Button></Link>
       </Box>
     </Box>

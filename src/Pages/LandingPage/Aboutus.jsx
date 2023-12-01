@@ -56,8 +56,8 @@ function AboutUs() {
         </Typography>
         <Typography variant="body1" paragraph style={{fontSize: "15px"}}>
           As parents and caregivers, we understand the challenge of introducing
-          the digital world to the younger generation. That's why we've built
-          <b style={{fontSize: "18px", color: "#5a5a84"}}>uFam</b> to be a learning platform as much as it is a social one,
+          the digital world to the younger generation. That's why we've built 
+          <b style={{fontSize: "18px", color: "#5a5a84"}}> uFam</b> to be a learning platform as much as it is a social one,
           guiding children and teenagers through the nuances of online
           communication with a focus on digital literacy and citizenship.
         </Typography>

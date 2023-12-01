@@ -59,6 +59,7 @@
     height: 40px;
     border-radius: 10px;
     border: 1px solid #000000;
+    font-size: 15px;
 }
 
 .sendInvitationButton {
@@ -94,8 +95,16 @@
     display: flex;
     justify-content: center;
 }
- .invSent{
+ .invSentRed{
     color: #ed1f29;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .invSentGreen{
+    color: #5aa793;
     display: flex;
     justify-content: center;
     flex-direction: column;

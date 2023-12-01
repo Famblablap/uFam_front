@@ -1,4 +1,4 @@
-// import React, { useState } from "react"
+import React, { useState } from "react"
 import "./Invitation.css"
 // import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
@@ -35,18 +35,18 @@ function Invitation() {
   return (
     <>
       <div className="contatinerInvitation">
-      {emailSent && <h2 className="invSent">INVITATION SENT!!</h2>}
-      {emptyEmail && <h2 className="invSent">UPS! Don't forget the email!</h2>}
+      {emailSent && <h2 style={{fontSize: "20px"}} className="invSentGreen">INVITATION SENT!!</h2>}
+      {emptyEmail && <h2 style={{fontSize: "20px"}} className="invSentRed">UPS! Don't forget the email!</h2>}
         <div className="contentInvitation">
           <div className="invitationBox" onKeyDown={handleKeyPress}>
             <div className="createFamInvitation">
-              <p><b>Create an Invitation</b></p>
+              <p><b style={{fontSize: "40px"}}>Create an Invitation</b></p>
             </div>
             <div className="createFamInvitation2">
-              <p><b> Create your relative account:</b></p>
+              <p><b style={{fontSize: "20px"}}> Create your relative account:</b></p>
             </div>
             <div className="emailInvitation">
-              <label><b>Email:</b></label>
+              <label><b style={{fontSize: "18px"}}>Email:</b></label>
               <input
                 id="emailInvitation"
                 type="email"
@@ -56,10 +56,10 @@ function Invitation() {
             </div>
             <div className="buttonBox">
               {email && <button onClick={() => sendInv()} className="sendInvitationButton">
-                <b>Send Invitation</b>
+                <b style={{fontSize: "20px"}}>Send Invitation</b>
               </button>}
               {!email && <button onClick={() => sendInv()} className="emptyEmailButton">
-                <b>Send Invitation</b>
+                <b style={{fontSize: "20px"}}>Send Invitation</b>
               </button>}
             </div>
           </div>
