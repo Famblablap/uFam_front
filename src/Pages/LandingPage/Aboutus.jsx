@@ -40,37 +40,37 @@ function AboutUs() {
         >
           Connecting Families, Building Bonds
         </Typography>
-        <Typography variant="body1" paragraph>
-          At <b>uFam</b>, we believe that the heart of a family can extend into
+        <Typography variant="body1" paragraph style={{fontSize: "15px"}}>
+          At <b style={{fontSize: "18px", color: "#5a5a84"}}>uFam</b>, we believe that the heart of a family can extend into
           the digital world. Our platform is designed to be a safe and private
           space where families can come together to share moments, memories, and
           messages without the worry of external influences or privacy concerns.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph style={{fontSize: "15px"}}>
           Our journey began with a simple vision: to create a social media
           environment that nurtures positive interactions, fosters healthy
-          digital habits, and respects the user's time and privacy. <b>uFam</b>{" "}
+          digital habits, and respects the user's time and privacy. <b style={{fontSize: "18px", color: "#5a5a84"}}>uFam</b>{" "}
           is more than just an app; it's a community, a space where the
           connection is genuine, the experiences are real, and the memories last
           a lifetime.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph style={{fontSize: "15px"}}>
           As parents and caregivers, we understand the challenge of introducing
           the digital world to the younger generation. That's why we've built
-          <b>uFam</b> to be a learning platform as much as it is a social one,
+          <b style={{fontSize: "18px", color: "#5a5a84"}}>uFam</b> to be a learning platform as much as it is a social one,
           guiding children and teenagers through the nuances of online
           communication with a focus on digital literacy and citizenship.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph style={{fontSize: "15px"}}>
           Our commitment is to continuously evolve with the needs of our
           families. We dedicate ourselves to creating features that enhance
           communication, celebrate milestones, and safeguard the wellbeing of
           all our members. From our family to yours, we welcome you to{" "}
-          <b>uFam</b> - where family comes first, always.
+          <b style={{fontSize: "18px", color: "#5a5a84"}}>uFam</b> - where family comes first, always.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph style={{fontSize: "15px"}}>
           Join us on this journey and be a part of a growing movement that's
-          reshaping the way families interact online. Welcome to the <b>uFam</b>
+          reshaping the way families interact online. Welcome to the <b style={{fontSize: "18px", color: "#5a5a84"}}>uFam </b>
           community – where every family member has a place, a voice, and a
           chance to thrive in the digital age.
         </Typography>
