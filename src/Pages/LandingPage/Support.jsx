@@ -29,13 +29,13 @@ function Support() {
       <Typography variant="h4" gutterBottom fontWeight={"bold"}>
         Support Center
       </Typography>
-      <Typography variant="body1" sx={{ mb: "1rem" }}>
+      <Typography variant="body1" sx={{ mb: "1rem", fontSize: "15px" }}>
         Welcome to the uFam Support Center. Here, you can find articles and
         resources to help you and your family navigate social media safely and
         responsibly.
       </Typography>
 
-      <Typography variant="h6" fontWeight={"bold"} sx={{ mt: "1rem" }}>
+      <Typography variant="h5" fontWeight={"bold"} sx={{ mt: "1rem" }}>
         Articles on Internet Safety
       </Typography>
       <List>
@@ -56,7 +56,7 @@ function Support() {
         </ListItem>
       </List>
 
-      <Typography variant="h6" fontWeight={"bold"} sx={{ mt: "1rem" }}>
+      <Typography variant="h5" fontWeight={"bold"} sx={{ mt: "1rem" }}>
         Healthy Tech Habits
       </Typography>
       <List>
@@ -77,7 +77,7 @@ function Support() {
         </ListItem>
       </List>
 
-      <Typography variant="h6" fontWeight={"bold"} sx={{ mt: "1rem" }}>
+      <Typography variant="h5" fontWeight={"bold"} sx={{ mt: "1rem" }}>
         Digital Literacy for Families
       </Typography>
       <List>
@@ -98,7 +98,7 @@ function Support() {
         </ListItem>
       </List>
 
-      <Typography variant="h6" fontWeight={"bold"} sx={{ mt: "1rem" }}>
+      <Typography variant="h5" fontWeight={"bold"} sx={{ mt: "1rem" }}>
         Need More Help?
       </Typography>
       <Typography variant="body1">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -17,18 +17,18 @@ const pages = [
   { title: "FAQ", path: "/faq" },
   { title: "SUPPORT", path: "/support" },
   { title: "DECALOGUE", path: "/decalogue" },
-]
+];
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = useState(null)
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget)
-  }
+    setAnchorElNav(event.currentTarget);
+  };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-  }
+    setAnchorElNav(null);
+  };
 
   return (
     <AppBar
@@ -46,9 +46,8 @@ function Header() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
               fontWeight: "bold",
-              fontSize: "2.5rem",
+              fontSize: "5rem",
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
@@ -109,9 +108,10 @@ function Header() {
                 sx={{
                   my: 2,
                   color: "white",
-                  display: "block",
+                  display: "flex",
+                  alignItems: "center",
                   fontWeight: "bold",
-                  fontSize: "1.25rem",
+                  fontSize: "2.5rem",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor: "white",
@@ -123,25 +123,23 @@ function Header() {
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip>
               <IconButton
                 component={NavLink}
                 to="/signup"
                 sx={{
-                  display: "inline-flex",
+                  display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "4px 16px",
-                  borderRadius: "20px",
+                  padding: "0px 16px",
+                  borderRadius: "30px",
                   border: "2px solid",
                   borderColor: "white",
                   backgroundColor: "transparent",
                   color: "white",
                   cursor: "pointer",
                   fontWeight: "bold",
-                  fontSize: "1rem",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor: "white",
@@ -149,14 +147,14 @@ function Header() {
                   },
                 }}
               >
-                CREATE FAMILY
+                <p style={{ fontSize: "20px" }}>CREATE FAMILY</p>
               </IconButton>
             </Tooltip>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-  )
+  );
 }
 
-export default Header
+export default Header;

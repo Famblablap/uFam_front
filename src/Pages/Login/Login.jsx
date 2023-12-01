@@ -45,11 +45,11 @@ function Login() {
         <div className="loginCard">
           <div>
             <div className="loginTitle">
-              <p><b>Log In</b></p>
+              <p><b style={{fontSize: "35px"}}>Log In</b></p>
             </div>
             <form className="formLogin" onKeyDown={handleKeyPress}>
               <div className="emailLogin">
-                <label><b>Email:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Email:</b></label><br></br>
                 <input
                   id="emailLogin"
                   type="email"
@@ -58,7 +58,7 @@ function Login() {
                 ></input>
               </div>
               <div className="passwordLogin">
-                <label><b>Password:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Password:</b></label><br></br>
                 <input
                   id="passwordLogin"
                   type="password"
@@ -68,20 +68,16 @@ function Login() {
               </div>
             </form>
           </div>
-          {errorMessage && <h4 className="creds">Ups! Your creds are wrong. Try again!</h4>}
+          {errorMessage && <h4 style={{fontSize: "20px"}} className="creds">Ups! Your creds are wrong. Try again!</h4>}
           <button onClick={() => onLogin()} className="loginButtonLogin">
-            <b>Log In</b>
+            <b style={{fontSize: "20px"}}>Log In</b>
           </button>
         </div>
         <div className="noAccountLogin">
-          <p>
-            <b>
-              Don't have an account:
-            </b>
-          </p>
+          <p><b style={{fontSize: "20px"}}>Don't have an account:</b></p>
           <Link to="/signup">
             <button className="singUpBottonLogin">
-              <b>Sign Up</b>
+              <b style={{fontSize: "20px"}}>Sign Up</b>
             </button>
           </Link>
         </div>

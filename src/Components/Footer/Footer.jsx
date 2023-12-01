@@ -25,41 +25,40 @@ function Footer() {
           noWrap
           gutterBottom
           sx={{
-            fontFamily: "monospace",
             fontWeight: "bold",
-            fontSize: "2.5rem",
+            fontSize: "5rem",
             letterSpacing: ".3rem",
             color: "inherit",
           }}
         >
           uFam
         </Typography>
-        <Box component="nav" sx={{ my: 2 }}>
+        <Box component="nav" sx={{ my: 2, fontSize: "2.5rem" }}>
           <Link
             href="#"
             color="inherit"
-            sx={{ mx: 2, fontWeight: "bold", fontSize: "1.25rem" }}
+            sx={{ mx: 2, fontWeight: "bold" }}
           >
             About
           </Link>
           <Link
             href="#"
             color="inherit"
-            sx={{ mx: 2, fontWeight: "bold", fontSize: "1.25rem" }}
+            sx={{ mx: 2, fontWeight: "bold" }}
           >
             Privacy Policy
           </Link>
           <Link
             href="#"
             color="inherit"
-            sx={{ mx: 2, fontWeight: "bold", fontSize: "1.25rem" }}
+            sx={{ mx: 2, fontWeight: "bold" }}
           >
             Cookies
           </Link>
           <Link
             href="#"
             color="inherit"
-            sx={{ mx: 2, fontWeight: "bold", fontSize: "1.25rem" }}
+            sx={{ mx: 2, fontWeight: "bold" }}
           >
             Legal
           </Link>
@@ -68,7 +67,7 @@ function Footer() {
           <IconButton aria-label="Facebook" color="inherit">
             <FacebookIcon />
           </IconButton>
-          <IconButton aria-label="Twitter" color="inherit">
+          <IconButton aria-label="X" color="inherit">
             <TwitterIcon />
           </IconButton>
           <IconButton aria-label="Instagram" color="inherit">
@@ -78,7 +77,7 @@ function Footer() {
             <LinkedInIcon />
           </IconButton>
         </Box>
-        <Typography variant="body2" color="white">
+        <Typography variant="body2" color="white" fontSize={ "1.5rem" }>
           © {new Date().getFullYear()} uFam. All rights reserved.
         </Typography>
       </Container>

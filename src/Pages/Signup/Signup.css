@@ -38,7 +38,8 @@
 .signupTitle {
     color: #000000;
     font-size: 40px;
-    height: 70px;
+    height: 40px;
+    margin-bottom: 20px;
 }
 
 .secondTitleSignup {
@@ -58,6 +59,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .nameSurnameLabelSignup {
@@ -72,6 +74,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 #surnameSignup {
@@ -80,6 +83,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .birthdaySignup {
@@ -94,6 +98,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .emailSignup {
@@ -108,6 +113,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .passwordSignup {
@@ -122,6 +128,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .repasswordSignup {
@@ -136,6 +143,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .signupButtonSignup {
@@ -175,21 +183,22 @@
 
 .alreadyAccountSignup{
     width: 500px;
-    height: 110px;
+    height: 200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
     border-radius: 10px;
     border: 5px solid #000000;
     background: #D2E7FB;
     color: #000000;
-    font-size: 25px;
+    background-color: rgb(198, 230, 247);
 }
 
 .loginButtonSignup {
     width: 105px;
     height: 50px;
+    margin: 20px;
     border-radius: 30px;
     border: 3px solid #000000;
     font-size: 20px;

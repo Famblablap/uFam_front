@@ -5,7 +5,7 @@ import backButtonimgSignup from "../../assets/img/back_sign_up.png"
 import kidPhoto from "../../assets/img/little-girl-uses-laptop-while-sitting-room-with-neon-lighting.jpg"
 import { Link } from "react-router-dom"
 import { signup } from "../../Services/auth"
-import { Flag } from "@mui/icons-material"
+// import { Flag } from "@mui/icons-material"
 
 
 function Signup() {
@@ -72,15 +72,15 @@ function Signup() {
         </Link>
         <div className="contentSignup" onKeyDown={handleKeyPress}>
           <div className="signupCard" >
-            <div className="signupTitle">
-              <p><b>Sign Up</b></p>
+            <div className="signupTitle" style={{marginTop: "20px"}}>
+              <p><b style={{fontSize: "35px"}}>Sign Up</b></p>
             </div>
             <div className="secondTitleSignup">
-              <p><b>Create your family admin account</b></p>
+              <p><b style={{fontSize: "22px"}}>Create your family admin account</b></p>
             </div>
             <form className="formSignup">
               <div className="familyNameSignup">
-                <label><b>Family Name:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Family Name:</b></label><br></br>
                 <input
                   id="familyNameSignup"
                   type="text"
@@ -89,8 +89,8 @@ function Signup() {
                 </input>
               </div>
               <div className="nameSurnameLabelSignup">
-                <label style={{ marginRight: "200px", marginTop: "5px" }}><b>Name:</b></label>
-                <label style={{ marginTop: "5px" }}><b>Surname:</b></label>
+                <label style={{ marginRight: "235px", marginTop: "5px" }}><b style={{fontSize: "18px"}}>Name:</b></label>
+                <label style={{ marginTop: "5px"}}><b style={{fontSize: "18px"}}>Surname:</b></label>
               </div>
               <div className="nameSurnameImnpuSignup">
                 <input style={{ marginRight: "50px" }}
@@ -107,7 +107,7 @@ function Signup() {
                 </input>
               </div>
               <div className="birthdaySignup">
-                <label><b>Birthday:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Birthday:</b></label><br></br>
                 <input
                   id="birthdaySignup"
                   type="date"
@@ -115,7 +115,7 @@ function Signup() {
                 </input>
               </div>
               <div className="emailSignup">
-                <label><b>Email:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Email:</b></label><br></br>
                 <input
                   id="emailSignup"
                   type="email"
@@ -124,7 +124,7 @@ function Signup() {
                 </input>
               </div>
               <div className="passwordSignup">
-                <label><b>Password:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Password:</b></label><br></br>
                 <input
                   id="passwordSignup"
                   type="password"
@@ -133,7 +133,7 @@ function Signup() {
                 </input>
               </div>
               <div className="repasswordSignup">
-                <label><b>Repeat Password:</b></label><br></br>
+                <label><b style={{fontSize: "18px"}}>Repeat Password:</b></label><br></br>
                 <input
                   id="repasswordSignup"
                   type="password"
@@ -142,18 +142,18 @@ function Signup() {
                 </input>
               </div>
             </form>
-            {errorMessage && <h4 className="creds">Profile incomplete!</h4>}
+            {errorMessage && <h4 style={{fontSize: "18px"}} className="creds">Profile incomplete!</h4>}
             <button onClick={() => onSignUp()} className="signupButtonSignup">
-              <b>Sign Up</b>
+              <b style={{fontSize: "20px"}}>Sign Up</b>
             </button>
           </div>
           <div className="signupCard2">
             <img className="kidPhoto" src={kidPhoto} />
             <div className="alreadyAccountSignup">
-              <p><b>Already have an account:</b></p>
+              <p><b style={{fontSize: "20px"}}>Already have an account:</b></p>
               <Link to="/login">
                 <button className="loginButtonSignup">
-                  <b>Log in</b>
+                  <b style={{fontSize: "20px"}}>Log in</b>
                 </button>
               </Link>
             </div>
