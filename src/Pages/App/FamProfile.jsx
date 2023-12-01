@@ -136,12 +136,13 @@ function FamProfile() {
             marginTop: "15px",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             backgroundColor: "rgba(114, 9, 183, 0.2 )",
             borderRadius: "21px",
             padding: "17px",
           }}
         >
-          <ImageList cols={3} rowHeight={200} gap={8}>
+          <ImageList cols={3} rowHeight={200} gap={8} sx={{height: "200px", width: "700px"}}>
             {getImagesForSelectedOption().map((image) => (
               <ImageListItem key={image.id}>
                 <img

@@ -4,12 +4,14 @@ import like from "../../assets/img/Like.png";
 import comment from "../../assets/img/Comment.png";
 // import userProfile from "../../assets/img/user.png"
 import { useEffect, useState } from "react";
-import { getAllFamContent } from "../../Services/content";
+import { getAllFamContent, getOneFamContent } from "../../Services/content";
 import likeactive from "../../assets/img/likeactive.png";
+import { Link, useParams } from "react-router-dom";
 
 function Feed() {
   const [contents, setContents] = useState([]);
   const [likes, setLikes] = useState({});
+  const { id } = useParams();
 
   useEffect(() => {
     showAllContent()
@@ -24,6 +26,7 @@ function Feed() {
     }, {})
     setLikes(initialLikes)
   }
+
 
   const handleLikeClick = (contentId) => {
     setLikes({ ...likes, [contentId]: !likes[contentId] })
@@ -48,7 +51,7 @@ function Feed() {
               marginBottom: "20px"
             }}
           >
-            <Box
+            <Link to={`/app/profile/${content.user.id}`}><Box
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -75,6 +78,7 @@ function Feed() {
                 {content.user.name} {content.user.surname}
               </Typography>
             </Box>
+            </Link>
             <Box
               sx={{
                 width: "80%",
