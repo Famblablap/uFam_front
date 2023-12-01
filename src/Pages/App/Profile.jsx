@@ -68,12 +68,12 @@ function Profile() {
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Avatar
-            sx={{ width: 50, height: 50, marginRight: 2 }}
+            sx={{ width: 80, height: 80, marginRight: 2 }}
             alt="User Avatar"
             src={userAvatar}
           />
           <Typography variant="h6">
-            {profile.name} {profile.surname}
+            <b style={{fontSize: "30px"}}>{profile.name} {profile.surname}</b>
           </Typography>
         </Box>
 
@@ -95,13 +95,13 @@ function Profile() {
           sx={{ display: "flex", alignItems: "center" }}
           onClick={() => handleOptionClick("PHOTOS")}
         >
-          <img src={photos} style={{ width: 40, height: 40 }} />
+          <img src={photos} style={{ width: 50, height: 50 }} />
           <Typography
             className="user-option"
             fontWeight="bold"
             sx={{ marginLeft: "5px", color: "rgba(114, 9, 183)" }}
           >
-            CONTENT
+            <b style={{ fontSize: "25px"}}>CONTENT</b>
           </Typography>
         </Box>
         {/* <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("VIDEOS")}>
@@ -118,13 +118,13 @@ function Profile() {
           sx={{ display: "flex", alignItems: "center" }}
           onClick={() => handleOptionClick("BLOG")}
         >
-          <img src={blog} style={{ width: 40, height: 40 }} />
+          <img src={blog} style={{ width: 50, height: 50 }} />
           <Typography
             className="user-option"
             fontWeight="bold"
             sx={{ marginLeft: "5px", color: "rgba(114, 9, 183)" }}
           >
-            BLOG
+            <b style={{ fontSize: "25px"}}>BLOG</b>
           </Typography>
         </Box>
       </Box>
@@ -163,7 +163,9 @@ function Profile() {
             height: "60vh",
           }}
         >
-          <Typography variant="h6">No content available</Typography>
+          <Typography variant="h6">
+            <b style={{fontSize: "25px"}}>No content available</b>
+          </Typography>
         </Box>
       )}
     </Box>

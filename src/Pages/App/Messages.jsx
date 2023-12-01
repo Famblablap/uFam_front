@@ -36,13 +36,17 @@ function Messages() {
               sx={{ display: "flex", alignItems: "center", padding: "17px" }}
             >
               <Avatar
-                sx={{ width: 50, height: 50, marginRight: 2 }}
+                sx={{ width: 70, height: 70, marginRight: 2 }}
                 alt="User Avatar"
                 src={userAvatar}
               />
               <Box>
-                <Typography variant="h6" fontWeight="bold">{message.user.name}</Typography>
-                <Typography variant="subtitle1">{message.message}</Typography>
+                <Typography variant="h6" fontWeight="bold">
+                  <b style={{ fontSize: "20px"}}>{message.user.name}</b>
+                  </Typography>
+                <Typography variant="subtitle1">
+                  <b style={{ fontSize: "15px"}}>{message.message}</b>
+                  </Typography>
               </Box>
             </Box>
           </Box>

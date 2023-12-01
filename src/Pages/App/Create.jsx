@@ -87,10 +87,10 @@ function Create() {
             textAlign: "center",
             color: "#A77AE4",
             fontWeight: "bold",
-            mb: 4,
+            mb: 3,
           }}
         >
-          CREATE NEW POST
+          <b style={{ fontSize: "30px"}}>CREATE NEW POST</b>
         </Typography>
         <IconButton
           aria-label="upload picture"
@@ -119,7 +119,7 @@ function Create() {
         />
         {uploadSuccess && (
           <Typography variant="subtitle1" sx={{ color: "#6ad877", mt: 2, fontWeight: "bold" }}>
-            Content posted correctly!!
+            <b style={{fontSize: "30px"}}>Content posted correctly!!</b>
           </Typography>
         )}
       </Box>
