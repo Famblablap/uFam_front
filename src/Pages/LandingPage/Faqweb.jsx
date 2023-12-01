@@ -6,61 +6,184 @@ const data = {
   title: "FAQ (How it works)",
   rows: [
     {
-      title: "Why uFam?",
-      content:
-        "We aim to provide a healthy online space to new generations so they can learn how to use social media under family's umbrella.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          Why uFam?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          We aim to provide a healthy online space to new generations so they
+          can learn how to use social media under family's umbrella.
+        </div>
+      ),
     },
     {
-      title: "Why don't eggs tell jokes?",
-      content: "They'd crack each other up.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          Why don't eggs tell jokes?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          They'd crack each other up.
+        </div>
+      ),
     },
     {
-      title: "I'm reading a book on anti-gravity.",
-      content: "It's impossible to put down!",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          I'm reading a book on anti-gravity.
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          It's impossible to put down!
+        </div>
+      ),
     },
     {
-      title: "What do you call an elephant that doesn't matter?",
-      content: "Irrelephant lol",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          What do you call an elephant that doesn't matter?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          Irrelephant lol
+        </div>
+      ),
     },
     {
-      title: "What do you call a fake noodle?",
-      content: "An impasta.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          What do you call a fake noodle?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          An impasta.
+        </div>
+      ),
     },
     {
-      title: "How do you make a tissue dance?",
-      content: "Put a little boogie in it.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          How do you make a tissue dance?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          Put a little boogie in it.
+        </div>
+      ),
     },
     {
-      title: "Why did the bicycle fall over?",
-      content: "Because it was two-tired!",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          Why did the bicycle fall over?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          Because it was two-tired!
+        </div>
+      ),
     },
     {
-      title: "What do you call cheese that isn't yours?",
-      content: "Nacho cheese.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          What do you call cheese that isn't yours?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          Nacho cheese.
+        </div>
+      ),
     },
     {
-      title: "What do you get when you cross a snowman and a vampire?",
-      content: "Frostbite.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          What do you get when you cross a snowman and a vampire?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>Frostbite.</div>
+      ),
     },
     {
-      title: "Why don't skeletons fight each other?",
-      content: "They don't have the guts.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          Why don't skeletons fight each other?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          They don't have the guts.
+        </div>
+      ),
     },
     {
-      title: "What did the janitor say when he jumped out of the closet?",
-      content: "Supplies!",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          What did the janitor say when he jumped out of the closet?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>Supplies!</div>
+      ),
     },
     {
-      title: "What's orange and sounds like a parrot?",
-      content: "A carrot.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          What's orange and sounds like a parrot?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>A carrot.</div>
+      ),
     },
     {
-      title: "Why did the golfer bring two pairs of pants?",
-      content: "In case he got a hole in one.",
+      title: (
+        <div
+          style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "10px" }}
+        >
+          Why did the golfer bring two pairs of pants?
+        </div>
+      ),
+      content: (
+        <div style={{ fontSize: "1.5rem", marginLeft: "10px" }}>
+          In case he got a hole in one.
+        </div>
+      ),
     },
   ],
-}
-
+};
 
 function Faqweb() {
   return (
@@ -82,12 +205,10 @@ function Faqweb() {
           boxSizing: "border-box",
         }}
       >
-        <Box sx={{ "& .faq-row": { fontSize: "2rem", margin: "10px" } }}>
-          <Faq data={data} />
-        </Box>
+        <Faq data={data} />
       </Box>
     </Box>
   );
 }
 
-export default Faqweb
+export default Faqweb;
