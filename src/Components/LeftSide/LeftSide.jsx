@@ -12,10 +12,10 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function LeftSide() {
- 
+
   const navigate = useNavigate()
 
-  function onLogout(){
+  function onLogout() {
     localStorage.removeItem("token")
     localStorage.removeItem("id")
     navigate("/")
@@ -23,20 +23,24 @@ function LeftSide() {
 
   return (
     <div id="leftside">
-      <h1>Ufam</h1>
+      <img
+        src="/src/assets/img/u__1_-removebg-preview.png"
+        atl="uFam_logo"
+        style={{ width: "150px", height: "150px", borderRadius: "10px" }}
+      ></img>
       <div id="menu">
-        <Link to="/app"><div className="menu_option"><img src={home} className="icon"/><b style={{fontSize: "20px"}}>Home</b></div></Link>
-        <Link to="/app/profile"><div className="menu_option"><img src={profile} className="icon"/><b style={{fontSize: "20px"}}>Profile</b></div></Link>
-        <Link to="/app/create"><div className="menu_option"><img src={create} className="icon"/><b style={{fontSize: "20px"}}>Create</b></div></Link>
-        <Link to="/app/invitation"><div className="menu_option"><img src={family_email} className="icon"/><b style={{fontSize: "20px"}}>Family Email</b></div></Link>
-        <Link to="/app/messages"><div className="menu_option"><img src={message} className="icon"/><b style={{fontSize: "20px"}}>Messages</b></div></Link>
-        <Link to="/app/notifications"><div className="menu_option"><img src={notifications} className="icon"/><b style={{fontSize: "20px"}}>Notifications</b></div></Link>
-        <Link to="/app/decalogue"><div className="menu_option"><img src={decalogue} className="icon"/><b style={{fontSize: "20px"}}>Decalogue</b></div></Link>
-        <Link to="/app/settings"><div className="menu_option"><img src={settings} className="icon"/><b style={{fontSize: "20px"}}>Settings</b></div></Link>
+        <Link to="/app"><div className="menu_option"><img src={home} className="icon" /><b style={{ fontSize: "20px" }}>Home</b></div></Link>
+        <Link to="/app/profile"><div className="menu_option"><img src={profile} className="icon" /><b style={{ fontSize: "20px" }}>Profile</b></div></Link>
+        <Link to="/app/create"><div className="menu_option"><img src={create} className="icon" /><b style={{ fontSize: "20px" }}>Create</b></div></Link>
+        <Link to="/app/invitation"><div className="menu_option"><img src={family_email} className="icon" /><b style={{ fontSize: "20px" }}>Family Email</b></div></Link>
+        <Link to="/app/messages"><div className="menu_option"><img src={message} className="icon" /><b style={{ fontSize: "20px" }}>Messages</b></div></Link>
+        <Link to="/app/notifications"><div className="menu_option"><img src={notifications} className="icon" /><b style={{ fontSize: "20px" }}>Notifications</b></div></Link>
+        <Link to="/app/decalogue"><div className="menu_option"><img src={decalogue} className="icon" /><b style={{ fontSize: "20px" }}>Decalogue</b></div></Link>
+        <Link to="/app/settings"><div className="menu_option"><img src={settings} className="icon" /><b style={{ fontSize: "20px" }}>Settings</b></div></Link>
       </div>
-      <div className="logoutButton" onClick={() => onLogout()}><img src={logout} className="icon"/></div>
+      <div className="logoutButton" onClick={() => onLogout()}><img src={logout} className="icon" /></div>
     </div>
-    
+
   )
 }
 

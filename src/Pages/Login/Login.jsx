@@ -27,7 +27,7 @@ function Login() {
         localStorage.setItem("token", loginResponse.token)
         localStorage.setItem("id", loginResponse.id)
         navigate("/app")
-      } 
+      }
     } catch (error) {
       setErrorMessage(true)
       console.error("Credenciales incorrectas", error)
@@ -38,46 +38,46 @@ function Login() {
     <>
       <div className="containerLogin">
         <Link to="/">
-          <div className="arrowButtonLogin">
-            <img src={arrowButtonLogin} />
-          </div>
+            <div className="arrowButtonLogin">
+              <img src={arrowButtonLogin} />
+            </div>
         </Link>
         <div className="loginCard">
           <div>
             <div className="loginTitle">
-              <p><b style={{fontSize: "35px"}}>Log In</b></p>
+              <p><b style={{ fontSize: "35px" }}>Log In</b></p>
             </div>
             <form className="formLogin" onKeyDown={handleKeyPress}>
               <div className="emailLogin">
-                <label><b style={{fontSize: "18px"}}>Email:</b></label><br></br>
+                <label><b style={{ fontSize: "18px" }}>Email:</b></label><br></br>
                 <input
                   id="emailLogin"
                   type="email"
                   placeholder="Enter your email"
-                  onChange={(e) => {setEmail(e.target.value); setErrorMessage(false)}}
+                  onChange={(e) => { setEmail(e.target.value); setErrorMessage(false) }}
                 ></input>
               </div>
               <div className="passwordLogin">
-                <label><b style={{fontSize: "18px"}}>Password:</b></label><br></br>
+                <label><b style={{ fontSize: "18px" }}>Password:</b></label><br></br>
                 <input
                   id="passwordLogin"
                   type="password"
                   placeholder="Enter your password"
-                  onChange={(e) => {setPassword(e.target.value); setErrorMessage(false)}}
+                  onChange={(e) => { setPassword(e.target.value); setErrorMessage(false) }}
                 ></input> <br></br>
               </div>
             </form>
           </div>
-          {errorMessage && <h4 style={{fontSize: "20px"}} className="creds">Ups! Your creds are wrong. Try again!</h4>}
+          {errorMessage && <h4 style={{ fontSize: "20px" }} className="creds">Ups! Your creds are wrong. Try again!</h4>}
           <button onClick={() => onLogin()} className="loginButtonLogin">
-            <b style={{fontSize: "20px"}}>Log In</b>
+            <b style={{ fontSize: "20px" }}>Log In</b>
           </button>
         </div>
         <div className="noAccountLogin">
-          <p><b style={{fontSize: "20px"}}>Don't have an account:</b></p>
+          <p><b style={{ fontSize: "20px" }}>Don't have an account:</b></p>
           <Link to="/signup">
             <button className="singUpBottonLogin">
-              <b style={{fontSize: "20px"}}>Sign Up</b>
+              <b style={{ fontSize: "20px" }}>Sign Up</b>
             </button>
           </Link>
         </div>

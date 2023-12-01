@@ -38,6 +38,11 @@ function Header() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ minHeight: "64px", padding: "8px 0" }}>
+          <img
+          src="src/assets/img/u__1_-removebg-preview.png"
+          atl="uFam_logo"
+          style={{ width: "150px", height: "150px", borderRadius: "10px" }}
+          ></img>
           <Typography
             variant="h6"
             noWrap
@@ -52,9 +57,9 @@ function Header() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none"
+              
             }}
           >
-            uFam
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton

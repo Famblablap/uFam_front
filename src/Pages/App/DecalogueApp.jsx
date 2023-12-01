@@ -30,9 +30,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>1. Be Kind Online</b>
+                <b style={{fontSize: "20px", color: "black"}}>1. Be Kind Online</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>Treat others as you would like to be treated. Kindness is
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>Treat others as you would like to be treated. Kindness is
                 key.</b>
               </>
             }
@@ -42,9 +42,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>2. Privacy is Precious</b>
+                <b style={{fontSize: "20px", color: "black"}}>2. Privacy is Precious</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>Keep your personal information private and safe.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>Keep your personal information private and safe.</b>
               </>
             }
           />
@@ -53,9 +53,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>3. Pause Before You Post</b>
+                <b style={{fontSize: "20px", color: "black"}}>3. Pause Before You Post</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>Think about the impact of your words and actions online.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>Think about the impact of your words and actions online.</b>
               </>
             }
           />
@@ -64,9 +64,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>4. Respect Boundaries</b>
+                <b style={{fontSize: "20px", color: "black"}}>4. Respect Boundaries</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>Ask for permission before sharing others' information or photos.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>Ask for permission before sharing others' information or photos.</b>
               </>
             }
           />
@@ -75,9 +75,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>5. Balance Your Time</b>
+                <b style={{fontSize: "20px", color: "black"}}>5. Balance Your Time</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>Make time for offline activities and enjoy the world outside screens.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>Make time for offline activities and enjoy the world outside screens.</b>
               </>
             }
           />
@@ -86,9 +86,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>6. Speak Up About Bullying</b>
+                <b style={{fontSize: "20px", color: "black"}}>6. Speak Up About Bullying</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>If you witness bullying, tell a trusted adult.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>If you witness bullying, tell a trusted adult.</b>
               </>
             }
           />
@@ -97,9 +97,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>7. Be a Critical Thinker</b>
+                <b style={{fontSize: "20px", color: "black"}}>7. Be a Critical Thinker</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}>Don't believe everything you see online; research and question.</b> 
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}>Don't believe everything you see online; research and question.</b> 
               </>
             }
           />
@@ -108,9 +108,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>8. Positive Vibes Only</b>
+                <b style={{fontSize: "20px", color: "black"}}>8. Positive Vibes Only</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}> Use social media to spread positivity and good vibes.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}> Use social media to spread positivity and good vibes.</b>
               </>
             }
           />
@@ -119,9 +119,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>9. Take a Break</b>
+                <b style={{fontSize: "20px", color: "black"}}>9. Take a Break</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}> If social media feels overwhelming, it's okay to step back.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}> If social media feels overwhelming, it's okay to step back.</b>
               </>
             }
           />
@@ -130,9 +130,9 @@ function DecalogueApp() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "25px", color: "black"}}>10. Ask for Help</b>
+                <b style={{fontSize: "20px", color: "black"}}>10. Ask for Help</b>
                 <br></br>
-                <b style={{fontSize: "20px", color: "#d6bbe9"}}> If something online makes you uncomfortable, talk to an adult.</b>
+                <b style={{fontSize: "15px", color: "#d6bbe9"}}> If something online makes you uncomfortable, talk to an adult.</b>
               </>
             }
           />

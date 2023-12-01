@@ -108,6 +108,9 @@
 }
 
 .arrowButtonLogin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-left: 10px;
     width: 73px;
     height: 70px;
@@ -130,4 +133,9 @@
     margin: 0;
     margin-top: 10px;
     color: #ed1f29;
+}
+
+.linkArrowButtonLogin {
+    width: 100px;
+    height: 100px;
 }

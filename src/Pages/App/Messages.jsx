@@ -36,7 +36,7 @@ function Messages() {
               sx={{ display: "flex", alignItems: "center", padding: "17px" }}
             >
               <Avatar
-                sx={{ width: 70, height: 70, marginRight: 2 }}
+                sx={{ width: 60, height: 60, marginRight: 2 }}
                 alt="User Avatar"
                 src={userAvatar}
               />

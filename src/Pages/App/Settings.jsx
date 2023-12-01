@@ -88,7 +88,7 @@ function Settings() {
           height: "15%",
           border: "3px solid black",
           borderRadius: "21px",
-          backgroundColor: "#d3b4ef",
+          backgroundColor: "#d3b4ef"
         }}
       >
         <Typography variant="subtitle2" fontWeight="bold" margin={"2.5%"} style={{fontSize: "16px"}}>
@@ -159,7 +159,7 @@ function Settings() {
           sx={{ width: "80%" }}
           onChange={handlePasswordChange}
         />
-        <Link to={"/app/profile"}>
+        <Link to={"/app/settings"}>
           <Button
           sx={{
             marginTop: "25px",

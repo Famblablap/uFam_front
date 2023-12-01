@@ -73,7 +73,7 @@ function Profile() {
             src={userAvatar}
           />
           <Typography variant="h6">
-            <b style={{fontSize: "30px"}}>{profile.name} {profile.surname}</b>
+            <b style={{fontSize: "25px"}}>{profile.name} {profile.surname}</b>
           </Typography>
         </Box>
 
@@ -101,7 +101,7 @@ function Profile() {
             fontWeight="bold"
             sx={{ marginLeft: "5px", color: "rgba(114, 9, 183)" }}
           >
-            <b style={{ fontSize: "25px"}}>CONTENT</b>
+            <b style={{ fontSize: "20px"}}>CONTENT</b>
           </Typography>
         </Box>
         {/* <Box sx={{ display: "flex", alignItems: "center" }} onClick={() => handleOptionClick("VIDEOS")}>
@@ -124,7 +124,7 @@ function Profile() {
             fontWeight="bold"
             sx={{ marginLeft: "5px", color: "rgba(114, 9, 183)" }}
           >
-            <b style={{ fontSize: "25px"}}>BLOG</b>
+            <b style={{ fontSize: "20px"}}>BLOG</b>
           </Typography>
         </Box>
       </Box>
