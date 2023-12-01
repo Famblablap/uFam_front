@@ -68,12 +68,12 @@ function Profile() {
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Avatar
-            sx={{ width: 80, height: 80, marginRight: 2 }}
+            sx={{ width: 50, height: 50, marginRight: 2 }}
             alt="User Avatar"
-            src={userAvatar}
+            src={profile.profile_picture}
           />
           <Typography variant="h6">
-            <b style={{fontSize: "25px"}}>{profile.name} {profile.surname}</b>
+            {profile.name} {profile.surname}
           </Typography>
         </Box>
 
@@ -95,7 +95,7 @@ function Profile() {
           sx={{ display: "flex", alignItems: "center" }}
           onClick={() => handleOptionClick("PHOTOS")}
         >
-          <img src={photos} style={{ width: 50, height: 50 }} />
+          <img src={photos} style={{ width: 40, height: 40 }} />
           <Typography
             className="user-option"
             fontWeight="bold"
