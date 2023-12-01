@@ -45,7 +45,7 @@ function Login() {
         <div className="loginCard">
           <div>
             <div className="loginTitle">
-              <p><b>Log In</b></p>
+              <p><b style={{fontSize: "18px"}}>Log In</b></p>
             </div>
             <form className="formLogin" onKeyDown={handleKeyPress}>
               <div className="emailLogin">

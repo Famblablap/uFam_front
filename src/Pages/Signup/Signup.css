@@ -59,6 +59,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .nameSurnameLabelSignup {
@@ -73,6 +74,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 #surnameSignup {
@@ -81,6 +83,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .birthdaySignup {
@@ -95,6 +98,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .emailSignup {
@@ -109,6 +113,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .passwordSignup {
@@ -123,6 +128,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .repasswordSignup {
@@ -137,6 +143,7 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #000;
+    font-size: 15px;
 }
 
 .signupButtonSignup {
