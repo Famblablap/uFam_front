@@ -22,6 +22,7 @@ import FamProfile from "../Pages/App/FamProfile";
 import Support from "../Pages/LandingPage/Support";
 import Contact from "../Pages/LandingPage/Contact";
 import { redirect } from "react-router-dom";
+import DecalogueApp from "../Pages/App/DecalogueApp";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -115,7 +116,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/app/decalogue",
-        element: <Decalogue />,
+        element: <DecalogueApp />,
       },
       {
         path: "/app/settings",
