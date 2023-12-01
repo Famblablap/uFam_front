@@ -69,6 +69,7 @@ function Feed() {
               <Avatar
                 sx={{ width: 40, height: 40, marginRight: 2 }}
                 alt="User Avatar"
+                src={content.user.profile_picture}
               />
               <Typography variant="subtitle1" fontWeight="bold">
                 {content.user.name} {content.user.surname}

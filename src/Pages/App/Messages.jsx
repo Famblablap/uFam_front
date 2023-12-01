@@ -38,7 +38,7 @@ function Messages() {
               <Avatar
                 sx={{ width: 50, height: 50, marginRight: 2 }}
                 alt="User Avatar"
-                src={userAvatar}
+                src={message.user.profile_picture}
               />
               <Box>
                 <Typography variant="h6" fontWeight="bold">{message.user.name}</Typography>

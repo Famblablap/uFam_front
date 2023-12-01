@@ -71,7 +71,7 @@ function FamProfile() {
             <Avatar
               sx={{ width: 50, height: 50, marginRight: 2 }}
               alt="User Avatar"
-              src={userAvatar}
+              src={famProfiles.profile_picture}
             />
             <Typography variant="h6">
               {famProfiles.name} {famProfiles.surname}
