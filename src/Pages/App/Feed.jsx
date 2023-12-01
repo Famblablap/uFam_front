@@ -6,6 +6,7 @@ import comment from "../../assets/img/Comment.png";
 import { useEffect, useState } from "react";
 import { getAllFamContent } from "../../Services/content";
 import likeactive from "../../assets/img/likeactive.png";
+import { Link } from "react-router-dom";
 
 function Feed() {
   const [contents, setContents] = useState([]);
@@ -24,6 +25,7 @@ function Feed() {
     }, {})
     setLikes(initialLikes)
   }
+
 
   const handleLikeClick = (contentId) => {
     setLikes({ ...likes, [contentId]: !likes[contentId] })
@@ -48,7 +50,7 @@ function Feed() {
               marginBottom: "20px"
             }}
           >
-            <Box
+            <Link to={`/app/profile/${content.user.id}`}><Box
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -69,11 +71,13 @@ function Feed() {
               <Avatar
                 sx={{ width: 40, height: 40, marginRight: 2 }}
                 alt="User Avatar"
+                src={content.user.profile_picture}
               />
               <Typography variant="subtitle1" fontWeight="bold">
                 {content.user.name} {content.user.surname}
               </Typography>
             </Box>
+            </Link>
             <Box
               sx={{
                 width: "80%",

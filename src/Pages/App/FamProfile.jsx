@@ -6,7 +6,7 @@ import {
   ImageListItem,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
-import userAvatar from "../../assets/img/user.png";
+// import userAvatar from "../../assets/img/user.png";
 import photos from "../../assets/img/photo_profile_icon.png";
 // import videos from "../../assets/img/videos_profile_icon.png";
 import blog from "../../assets/img/blog_profile_icon.png";
@@ -71,7 +71,7 @@ function FamProfile() {
             <Avatar
               sx={{ width: 50, height: 50, marginRight: 2 }}
               alt="User Avatar"
-              src={userAvatar}
+              src={famProfiles.profile_picture}
             />
             <Typography variant="h6">
               {famProfiles.name} {famProfiles.surname}
@@ -136,12 +136,13 @@ function FamProfile() {
             marginTop: "15px",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             backgroundColor: "rgba(114, 9, 183, 0.2 )",
             borderRadius: "21px",
             padding: "17px",
           }}
         >
-          <ImageList cols={3} rowHeight={200} gap={8}>
+          <ImageList cols={3} rowHeight={200} gap={8} sx={{height: "200px", width: "700px"}}>
             {getImagesForSelectedOption().map((image) => (
               <ImageListItem key={image.id}>
                 <img
