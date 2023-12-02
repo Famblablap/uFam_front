@@ -15,12 +15,15 @@ import "../../Components/FeedComponents/Feed.css";
 import { useEffect, useState } from "react";
 import { getFamProfile } from "../../Services/user";
 import { getOneFamContent } from "../../Services/content";
+import FullScreen from "../../Components/FullScreen/FullScreen";
+
 
 function FamProfile() {
   const { id } = useParams();
   const [famProfiles, setFamProfile] = useState({});
   const [famContent, setFamContent] = useState([]);
   const [selectedOption, setSelectedOption] = useState("PHOTOS");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     showFamProfile();
@@ -41,6 +44,10 @@ function FamProfile() {
     setSelectedOption(option);
   };
 
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+
   const getImagesForSelectedOption = () => {
     switch (selectedOption) {
       case "PHOTOS":
@@ -57,6 +64,11 @@ function FamProfile() {
   return (
     <>
       <Box key={famProfiles.id} sx={{ padding: 2 }}>
+      {selectedImage && (
+        <FullScreen
+          selectedImage={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />)}
         <Box
           sx={{
             display: "flex",
@@ -144,7 +156,7 @@ function FamProfile() {
         >
           <ImageList cols={3} rowHeight={200} gap={8} sx={{maxHeight: "100vh", maxWidth: "80vw"}}>
             {getImagesForSelectedOption().map((image) => (
-              <ImageListItem key={image.id}>
+              <ImageListItem key={image.id} onClick={() => handleImageClick(image)}>
                 <img
                   src={image.content_url}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
