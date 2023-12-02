@@ -142,7 +142,7 @@ function FamProfile() {
             padding: "17px",
           }}
         >
-          <ImageList cols={3} rowHeight={200} gap={8} sx={{height: "200px", width: "700px"}}>
+          <ImageList cols={3} rowHeight={200} gap={8} sx={{maxHeight: "100vh", maxWidth: "80vw"}}>
             {getImagesForSelectedOption().map((image) => (
               <ImageListItem key={image.id}>
                 <img
