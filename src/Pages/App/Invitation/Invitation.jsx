@@ -51,6 +51,7 @@ function Invitation() {
                 id="emailInvitation"
                 type="email"
                 placeholder="Enter email"
+                style={{ paddingLeft: '10px' }}
                 onChange={(e) => { setEmail(e.target.value); setEmailSent(false); setEmptyEmail(false)}}>
               </input>
             </div>
