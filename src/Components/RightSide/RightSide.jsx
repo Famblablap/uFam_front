@@ -29,6 +29,7 @@ function RigthSide() {
         <Avatar
           sx={{ width: 80, height: 80, marginBottom: 1 }}
           className="familyIcon"
+          src="https://res.cloudinary.com/dehapq68a/image/upload/v1701529979/xwjmrct4ut2wq9fzqnzb.jpg"
         />
       </Box>
       <Box className="boxpalasrisas"></Box>

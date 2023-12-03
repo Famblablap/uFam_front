@@ -15,11 +15,14 @@ import { useEffect, useState } from "react";
 import { getProfile } from "../../Services/user";
 import { Link } from "react-router-dom";
 import { getMyContent } from "../../Services/content";
+import FullScreen from "../../Components/FullScreen/FullScreen";
 
 function Profile() {
   const [profile, setProfile] = useState({});
   const [myContent, setMyContent] = useState([]);
   const [selectedOption, setSelectedOption] = useState("PHOTOS");
+  const [selectedImage, setSelectedImage] = useState(null);
+
 
   useEffect(() => {
     showProfile();
@@ -40,6 +43,11 @@ function Profile() {
     setSelectedOption(option);
   };
 
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+  
+
   const getImagesForSelectedOption = () => {
     switch (selectedOption) {
       case "PHOTOS":
@@ -55,6 +63,12 @@ function Profile() {
 
   return (
     <Box sx={{ padding: 2 }}>
+       {selectedImage && (
+        <FullScreen
+          selectedImage={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+    )}
       <Box
         sx={{
           display: "flex",
@@ -136,14 +150,16 @@ function Profile() {
             backgroundColor: "rgba(114, 9, 183, 0.2 )",
             borderRadius: "21px",
             padding: "17px",
+           
           }}
         >
-          <ImageList cols={3} rowHeight={200} gap={8}>
+          <ImageList cols={3} rowHeight={200} gap={8} sx={{maxHeight: "100vh", maxWidth: "80vw"}}>
             {getImagesForSelectedOption().map((image) => (
-              <ImageListItem key={image.id}>
+              <ImageListItem key={image.id} onClick={() => handleImageClick(image)}>
                 <img
                   src={image.content_url}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  
                 />
               </ImageListItem>
             ))}
