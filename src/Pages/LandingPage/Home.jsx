@@ -70,7 +70,7 @@ function Home() {
             <Typography
               sx={{
                 flex: 1,
-                bgcolor: "rgba(64, 103, 129, 0.40)",
+                bgcolor: "rgba(0, 0, 0, 0.4)",
                 borderRadius: 2,
                 border: "3px solid",
                 borderColor: "white",
@@ -132,7 +132,7 @@ function Home() {
           <Box
             sx={{
               flex: 1,
-              bgcolor: "rgba(64, 103, 129, 0.40)",
+              bgcolor: "rgba(0, 0, 0, 0.4)",
               borderRadius: 2,
               border: "3px solid",
               borderColor: "white",
@@ -200,7 +200,7 @@ function Home() {
                   flexShrink: 0,
                   width: 230,
                   height: 350,
-                  bgcolor: "rgba(64, 103, 129, 0.40)",
+                  bgcolor: "rgba(0, 0, 0, 0.4)",
                   borderRadius: 2,
                   border: "3px solid",
                   borderColor: "white",
@@ -236,7 +236,7 @@ function Home() {
           <Box
             sx={{
               flex: 1,
-              bgcolor: "rgba(64, 103, 129, 0.40)",
+              bgcolor: "rgba(0, 0, 0, 0.4)",
               borderRadius: 2,
               border: "3px solid",
               borderColor: "white",

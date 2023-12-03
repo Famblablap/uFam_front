@@ -103,7 +103,11 @@ function ContactForm() {
         label="Name"
         value={formData.name}
         onChange={handleChange}
-        sx={{ backgroundColor: "white" }}
+        sx={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          border: "1px solid #000"
+        }}
       />
       <TextField
         required
@@ -113,7 +117,11 @@ function ContactForm() {
         label="Email"
         value={formData.email}
         onChange={handleChange}
-        sx={{ backgroundColor: "white" }}
+        sx={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          border: "1px solid #000"
+        }}
       />
       <TextField
         required
@@ -125,7 +133,11 @@ function ContactForm() {
         rows={4}
         value={formData.message}
         onChange={handleChange}
-        sx={{ backgroundColor: "white" }}
+        sx={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          border: "1px solid #000"
+        }}
       />
       <Button
         component={NavLink}

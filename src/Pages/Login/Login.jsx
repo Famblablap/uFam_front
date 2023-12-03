@@ -64,6 +64,7 @@ function Login() {
                   id="emailLogin"
                   type="email"
                   placeholder="Enter your email"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setEmail(e.target.value); setErrorMessage(false) }}
                 ></input>
               </div>
@@ -73,6 +74,7 @@ function Login() {
                   id="passwordLogin"
                   type="password"
                   placeholder="Enter your password"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setPassword(e.target.value); setErrorMessage(false) }}
                 ></input> <br></br>
               </div>

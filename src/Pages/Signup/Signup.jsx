@@ -95,6 +95,7 @@ function Signup() {
                   id="familyNameSignup"
                   type="text"
                   placeholder="Enter your Family Name"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => setFamilyName(e.target.value)}>
                 </input>
               </div>
@@ -103,7 +104,7 @@ function Signup() {
                 <label style={{ marginTop: "5px" }}><b style={{ fontSize: "18px" }}>Surname:</b></label>
               </div>
               <div className="nameSurnameImnpuSignup">
-                <input style={{ marginRight: "50px" }}
+                <input style={{ marginRight: "50px", paddingLeft: '10px' }}
                   id="nameSignup"
                   type="text"
                   placeholder="Enter your name"
@@ -113,6 +114,7 @@ function Signup() {
                   id="surnameSignup"
                   type="text"
                   placeholder="Enter your surname"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setSurname(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
@@ -121,6 +123,7 @@ function Signup() {
                 <input
                   id="birthdaySignup"
                   type="date"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setBirthday(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
@@ -130,6 +133,7 @@ function Signup() {
                   id="emailSignup"
                   type="email"
                   placeholder="Enter your email"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setEmail(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
@@ -139,6 +143,7 @@ function Signup() {
                   id="passwordSignup"
                   type="password"
                   placeholder="Enter your password"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setPassword(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
@@ -148,6 +153,7 @@ function Signup() {
                   id="repasswordSignup"
                   type="password"
                   placeholder="Repeat your email"
+                  style={{ paddingLeft: '10px' }}
                   onChange={(e) => { setRepeatPassword(e.target.value); setErrorMessage(false) }}>
                 </input>
               </div>
