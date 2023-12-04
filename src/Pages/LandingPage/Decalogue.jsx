@@ -8,7 +8,7 @@ function Decalogue() {
         maxWidth: "800px",
         margin: "0 auto",
         textAlign: "center",
-        bgcolor: "rgba(64, 103, 129, 0.40)",
+        bgcolor: "rgba(0, 0, 0, 0.4)",
         color: "white",
         borderRadius: 2,
         border: "3px solid white",
@@ -25,7 +25,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>1. Be Kind Online</b>
+                <b style={{ fontSize: "20px" }}>1. Be Kind Online</b>
                 <br /> Treat others as you would like to be treated. Kindness is
                 key.
               </>
@@ -36,7 +36,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>2. Privacy is Precious</b>
+                <b style={{ fontSize: "20px" }}>2. Privacy is Precious</b>
                 <br /> Keep your personal information private and safe.
               </>
             }
@@ -46,7 +46,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>3. Pause Before You Post</b>
+                <b style={{ fontSize: "20px" }}>3. Pause Before You Post</b>
                 <br /> Think about the impact of your words and actions online.
               </>
             }
@@ -56,7 +56,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>4. Respect Boundaries</b>
+                <b style={{ fontSize: "20px" }}>4. Respect Boundaries</b>
                 <br /> Ask for permission before sharing others' information or
                 photos.
               </>
@@ -67,7 +67,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>5. Balance Your Time</b>
+                <b style={{ fontSize: "20px" }}>5. Balance Your Time</b>
                 <br /> Make time for offline activities and enjoy the world
                 outside screens.
               </>
@@ -78,7 +78,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>6. Speak Up About Bullying</b>
+                <b style={{ fontSize: "20px" }}>6. Speak Up About Bullying</b>
                 <br /> If you witness bullying, tell a trusted adult.
               </>
             }
@@ -88,7 +88,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>7. Be a Critical Thinker</b>
+                <b style={{ fontSize: "20px" }}>7. Be a Critical Thinker</b>
                 <br /> Don't believe everything you see online; research and
                 question.
               </>
@@ -99,7 +99,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>8. Positive Vibes Only</b>
+                <b style={{ fontSize: "20px" }}>8. Positive Vibes Only</b>
                 <br /> Use social media to spread positivity and good vibes.
               </>
             }
@@ -109,7 +109,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>9. Take a Break</b>
+                <b style={{ fontSize: "20px" }}>9. Take a Break</b>
                 <br /> If social media feels overwhelming, it's okay to step
                 back.
               </>
@@ -120,7 +120,7 @@ function Decalogue() {
           <ListItemText
             primary={
               <>
-                <b style={{fontSize: "20px"}}>10. Ask for Help</b>
+                <b style={{ fontSize: "20px" }}>10. Ask for Help</b>
                 <br /> If something online makes you uncomfortable, talk to an
                 adult.
               </>

@@ -170,7 +170,7 @@ function Home() {
               alt="Family"
               style={{
                 maxWidth: "100%",
-                height: "50vh",
+                height: "40vh",
                 borderRadius: "20px",
               }}
             />
